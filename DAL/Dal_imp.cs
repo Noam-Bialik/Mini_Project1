@@ -73,74 +73,72 @@ namespace DAL
 
             return ret;
         }
+        /// <summary>
+        /// return the list that in DAL (and not more)
+        /// </summary>
+        /// <returns></returns>
         public List<Tester> GetTesters()
-        {
-            return DS.DS.Testers;
+        {  
+            return new List<Tester>(DS.DS.Testers);
         }
+        /// <summary>
+        /// return the list that in DAL (and not more)
+        /// </summary>
+        /// <returns></returns>
         public List<Test> GetTests()
         {
-            return DS.DS.Tests;
+            return new List<Test>(DS.DS.Tests);
         }
+        /// <summary>
+        /// return the list that in DAL (and not more)
+        /// </summary>
+        /// <returns></returns>
         public List<Trainee> GetTrainees()
         {
             return DS.DS.Trainees;
         }
 
-        //remove functions
-        public Trainee RemoveTrainee(string id)
+        /// <summary>
+        /// return true if removed
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public bool RemoveTrainee(string id)
         {
-            //throw Exception if the id wasn't found
-            Trainee help = DS.DS.Trainees.Find(t => t.Id == id);
-            if (help == null)
-                throw new Exception("the trainee dosen't exist");
-            //delete the trainee
-            DS.DS.Trainees.Remove(help);
-            //return the trainee
-            return help; 
+            int help = DS.DS.Trainees.RemoveAll(tester => id == tester.Id);
+            return help == 1;
         }
-        public Trainee RemoveTrainee(Trainee trainee)
+        /// <summary>
+        /// return true if removed
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public bool RemoveTrainee(Trainee trainee)
         {
-            //try remove the trainee
-            Trainee help;
-            try
-            {
-                help = RemoveTrainee(trainee.Id);
-            }
-            catch (Exception)
-            {
+            return DS.DS.Trainees.Remove(trainee);
+        }
+        /// <summary>
+        /// return true if removed
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public bool RemoveTester(Tester tester)
+        {
+         return DS.DS.Testers.Remove(tester);
+        }
+        /// <summary>
+        /// return true if removed
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public bool RemoveTester(string id)
+        {
 
-                throw;
-            }
-            //if the trainee was removed return him
-            return help;
+            DS.DS.Testers.RemoveAll(tester=>  tester.Id == id );
+            return false;
         }
-        public Tester RemoveTester(string id)
-        {
-            //throw Exception if the id wasn't found
-            Tester help = DS.DS.Testers.Find(t => t.Id == id);
-            if (help == null)
-                throw new Exception("the tester dosen't exist");
-            //delete the tester
-            DS.DS.Testers.Remove(help);
-            //return the tester
-            return help;
-        }
-        public Tester RemoveTester(Tester tester)
-        {
-            //try remove the tester
-            Tester help;
-            try
-            {
-                help = RemoveTester(tester.Id);
-            }
-            catch (Exception)
-            {
 
-                throw;
-            }
-            //if the tester was removed return him
-            return help;
-        }
+  
 
         //update function
         public bool UpdateTest(int test_id, int grade, string note)

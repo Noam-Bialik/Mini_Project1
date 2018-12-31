@@ -6,7 +6,6 @@ namespace BE
     {
        
 
-        private static int test_number = 0;
         private int test_id;
         private string tester_id;
         private string trainee_id;
@@ -15,16 +14,15 @@ namespace BE
         private Address preferred_treinee_address;
         private Address start_address;
         private Address end_Address;
-        private int grade;
-        private string note;
+        private int grade;// the diffult is _1_ 
+        private string note;//the diffult is _null_
 
         public Test( string tester_id, string trainee_id, DateTime preferred_treinee_time, Vehicle type, Address start_address, Address preferred_treinee_address, Address end_Address)
         {
             try
             {
 
-                test_number++;
-                test_id = test_number;
+                test_id = -1;//defulf 
                 Tester_id = tester_id;
                 Trainee_id = trainee_id;
                 Preferred_treinee_time = preferred_treinee_time;
@@ -32,12 +30,32 @@ namespace BE
                 Start_address = start_address;
                 Preferred_treinee_address = preferred_treinee_address;
                 End_Address = end_Address;
-
+                grade = -1;
             }
             catch(Exception)
             { throw; }
         }
-        public int Test_id { get => test_id; }
+       /* public Test(Test test)
+        {
+            try
+            {
+
+               
+                test_id = test.test_id;
+                Tester_id = test.tester_id;
+                Trainee_id = test.trainee_id;
+                Preferred_treinee_time = test.preferred_treinee_time;
+                Type = test.type;
+                Start_address = test.start_address;
+                Preferred_treinee_address = test.preferred_treinee_address;
+                End_Address = test.end_Address;
+                grade = test.grade;
+                note = test.note;
+            }
+            catch (Exception)
+            { throw; }
+        }*/
+        public int Test_id { get => test_id; set => test_id = value; }
         public string Tester_id { get => tester_id; set => tester_id = value; }
         public string Trainee_id { get => trainee_id; set => trainee_id = value; }
         public DateTime Preferred_treinee_time { get => preferred_treinee_time; set => preferred_treinee_time = value; }
