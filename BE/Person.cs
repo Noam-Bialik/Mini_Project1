@@ -38,7 +38,16 @@ namespace BE
             Phone_number = phone_number;
             _Address = address;
         }
-        public virtual string ToString()
+        public void copy(Person c)//copy c to the object unless the id
+        {
+            First_name = c.First_name;
+            Last_name = c.Last_name;
+            Birthdate = c.Birthdate;
+            _Gender = c._Gender;
+            Phone_number = c.Phone_number;
+            _Address = c._Address;
+        }
+        public override string ToString()
         {
             return "id: " + Id + "first name: " + First_name + "last name: " + Last_name;
         }

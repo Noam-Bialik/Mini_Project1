@@ -18,13 +18,13 @@ namespace BE
         private int grade;
         private string note;
 
-        public Test( string tester_id, string trainee_id, DateTime preferred_treinee_time, Vehicle type, Address start_address, Address preferred_treinee_address, Address end_Address, int grade, string note)
+        public Test( string tester_id, string trainee_id, DateTime preferred_treinee_time, Vehicle type, Address start_address, Address preferred_treinee_address, Address end_Address)
         {
             try
             {
 
                 test_number++;
-                test_id = test_number.GetHashCode();
+                test_id = test_number;
                 Tester_id = tester_id;
                 Trainee_id = trainee_id;
                 Preferred_treinee_time = preferred_treinee_time;
@@ -32,8 +32,7 @@ namespace BE
                 Start_address = start_address;
                 Preferred_treinee_address = preferred_treinee_address;
                 End_Address = end_Address;
-                Grade = grade;
-                Note = note;
+
             }
             catch(Exception)
             { throw; }
@@ -49,9 +48,14 @@ namespace BE
         public int Grade { get => grade; set => grade = value; }
         public string Note { get => note; set => note = value; }
 
+        public void EndTest(int grade, string note)//update the grade and the note after the test
+        {
+            Grade = grade;
+            Note = note;
+        }
         public override string ToString()
         {
-            return base.ToString();
+            return "trainee id: " + trainee_id + " grade: " + Grade + " note: " + note;
         }
     }
 }
