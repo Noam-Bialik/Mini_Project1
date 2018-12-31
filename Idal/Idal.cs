@@ -29,9 +29,7 @@ namespace DAL
 
         List<Tester> GetTesters();// return list of all Testers.
         List<Trainee> GetTrainees();//return list of all Trainees.
-        List<Test> GetTests();//return list of all Tests/
-
-
+        List<Test> GetTests();//return list of all Tests.
 
     }
 }

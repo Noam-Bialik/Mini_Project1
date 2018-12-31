@@ -53,6 +53,10 @@
       <Project>{99a74661-987b-4e82-9b7f-0a0b8b634954}</Project>
       <Name>DS</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Idal\Idal.csproj">
+      <Project>{8f3e1a5b-ca19-4ed7-a787-b0cecc8ace7e}</Project>
+      <Name>Idal</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
