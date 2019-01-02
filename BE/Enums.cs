@@ -6,7 +6,7 @@ namespace BE
 {
     public enum Vehicle
     {
-        Privte, TwoWheeled, MediumTruck, HeavyTruck
+        Privte, TwoWheeled, MediumTruck, HeavyTruck,
     }
     public enum Gearbox
     {
@@ -14,6 +14,6 @@ namespace BE
     }
     public enum Gender
     {
-        Male, Female
+        Male, Female, other
     }
 }

@@ -49,6 +49,7 @@ namespace BE
                 for (int j = 0; j < 7; j++)
                     schedule[i][j] = value[i][j];
         }
+     
         public Tester(string id, string first_name, string last_name, DateTime birthdate, Gender gender, string phone_number, Address address, int experience, int max_tests_per_week, double max_range, Vehicle speciality, bool[][] schedule = null) : base(id, first_name, last_name, birthdate, gender, phone_number, address)
         {
             //create schedule array
@@ -75,6 +76,8 @@ namespace BE
                 throw;
             }
         }
+        
+
         public void copy(Tester c)//copy c to the object unless the id
         {
             //copy all the person's attributes
