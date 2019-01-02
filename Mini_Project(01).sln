@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryDal", "FactoryDal\Fa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Idal", "Idal\Idal.csproj", "{8F3E1A5B-CA19-4ED7-A787-B0CECC8ACE7E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ibl", "ClassLibrary1\Ibl.csproj", "{00E8F93C-342A-4B06-BA35-614FDEC881E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bl_imp", "Bl_imp\Bl_imp.csproj", "{7E4197BF-F148-449E-99FD-041BAF544139}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{8F3E1A5B-CA19-4ED7-A787-B0CECC8ACE7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F3E1A5B-CA19-4ED7-A787-B0CECC8ACE7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F3E1A5B-CA19-4ED7-A787-B0CECC8ACE7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00E8F93C-342A-4B06-BA35-614FDEC881E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00E8F93C-342A-4B06-BA35-614FDEC881E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00E8F93C-342A-4B06-BA35-614FDEC881E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00E8F93C-342A-4B06-BA35-614FDEC881E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E4197BF-F148-449E-99FD-041BAF544139}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E4197BF-F148-449E-99FD-041BAF544139}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E4197BF-F148-449E-99FD-041BAF544139}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E4197BF-F148-449E-99FD-041BAF544139}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

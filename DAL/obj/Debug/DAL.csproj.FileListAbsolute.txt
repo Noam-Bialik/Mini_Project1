@@ -1,0 +1,13 @@
+C:\Users\Noam Bialik\source\repos\Mini_Project1\DAL\bin\Debug\DAL.dll
+C:\Users\Noam Bialik\source\repos\Mini_Project1\DAL\bin\Debug\DAL.pdb
+C:\Users\Noam Bialik\source\repos\Mini_Project1\DAL\bin\Debug\BE.dll
+C:\Users\Noam Bialik\source\repos\Mini_Project1\DAL\bin\Debug\DS.dll
+C:\Users\Noam Bialik\source\repos\Mini_Project1\DAL\bin\Debug\Idal.dll
+C:\Users\Noam Bialik\source\repos\Mini_Project1\DAL\bin\Debug\BE.pdb
+C:\Users\Noam Bialik\source\repos\Mini_Project1\DAL\bin\Debug\DS.pdb
+C:\Users\Noam Bialik\source\repos\Mini_Project1\DAL\bin\Debug\Idal.pdb
+C:\Users\Noam Bialik\source\repos\Mini_Project1\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\Noam Bialik\source\repos\Mini_Project1\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Noam Bialik\source\repos\Mini_Project1\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\Noam Bialik\source\repos\Mini_Project1\DAL\obj\Debug\DAL.dll
+C:\Users\Noam Bialik\source\repos\Mini_Project1\DAL\obj\Debug\DAL.pdb

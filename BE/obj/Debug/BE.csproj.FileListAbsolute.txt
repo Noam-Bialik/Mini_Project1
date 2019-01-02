@@ -4,3 +4,9 @@ C:\Users\Noam Bialik\source\repos\Mini_Project(01)\BE\obj\Debug\BE.csprojAssembl
 C:\Users\Noam Bialik\source\repos\Mini_Project(01)\BE\obj\Debug\BE.csproj.CoreCompileInputs.cache
 C:\Users\Noam Bialik\source\repos\Mini_Project(01)\BE\obj\Debug\BE.dll
 C:\Users\Noam Bialik\source\repos\Mini_Project(01)\BE\obj\Debug\BE.pdb
+C:\Users\Noam Bialik\source\repos\Mini_Project1\BE\bin\Debug\BE.dll
+C:\Users\Noam Bialik\source\repos\Mini_Project1\BE\bin\Debug\BE.pdb
+C:\Users\Noam Bialik\source\repos\Mini_Project1\BE\obj\Debug\BE.csprojAssemblyReference.cache
+C:\Users\Noam Bialik\source\repos\Mini_Project1\BE\obj\Debug\BE.csproj.CoreCompileInputs.cache
+C:\Users\Noam Bialik\source\repos\Mini_Project1\BE\obj\Debug\BE.dll
+C:\Users\Noam Bialik\source\repos\Mini_Project1\BE\obj\Debug\BE.pdb

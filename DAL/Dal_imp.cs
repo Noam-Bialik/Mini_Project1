@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Linq;
 using BE;
 using DS;
 
@@ -13,10 +14,28 @@ namespace DAL
         //add functions
         public void AddTest(Test test)
         {
-            //check if exist test with the same id
-            Test help = DS.DS.Tests.Find(t => t.Test_id == test.Test_id);
-            if (help != null)
-                throw new Exception("test with the same id already exist");
+            if (test.Test_id == -1)
+            {
+                //initialize test id
+                if (DS.DS.Tests.Count == 0)
+                    test.Test_id = 0;
+                else
+                {
+                    var v = from i in DS.DS.Tests
+                            orderby i.Test_id
+                            select i.Test_id;
+                    long temp = v.Max();
+                    test.Test_id = temp + 1;
+                }
+
+            }
+            else
+            {
+                //check if exist test with the same id
+                Test help = DS.DS.Tests.Find(t => t.Test_id == test.Test_id);
+                if (help != null)
+                    throw new Exception("test with the same id already exist");
+            }
 
             //if the id don't exist add the test
             DS.DS.Tests.Add(test);
@@ -78,7 +97,7 @@ namespace DAL
         /// </summary>
         /// <returns></returns>
         public List<Tester> GetTesters()
-        {  
+        {
             return new List<Tester>(DS.DS.Testers);
         }
         /// <summary>
@@ -103,42 +122,47 @@ namespace DAL
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public bool RemoveTrainee(string id)
+        public void RemoveTrainee(string id)
         {
             int help = DS.DS.Trainees.RemoveAll(tester => id == tester.Id);
-            return help == 1;
+            if (help == 0)
+                throw new Exception("the trainee not exist");
         }
         /// <summary>
         /// return true if removed
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public bool RemoveTrainee(Trainee trainee)
+        public void RemoveTrainee(Trainee trainee)
         {
-            return DS.DS.Trainees.Remove(trainee);
+            bool help = DS.DS.Trainees.Remove(trainee);
+            if (help == false)
+                throw new Exception("the trainee not exist");
         }
         /// <summary>
         /// return true if removed
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public bool RemoveTester(Tester tester)
+        public void RemoveTester(Tester tester)
         {
-         return DS.DS.Testers.Remove(tester);
+            bool help = DS.DS.Testers.Remove(tester);
+            if (help == false)
+                throw new Exception("the tester not exist");
         }
         /// <summary>
         /// return true if removed
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public bool RemoveTester(string id)
+        public void RemoveTester(string id)
         {
+            int help = DS.DS.Testers.RemoveAll(tester => tester.Id == id);
+            if (help == 0)
+                throw new Exception("the tester not exist");
+        }
 
-            DS.DS.Testers.RemoveAll(tester=>  tester.Id == id );
-            return false;
-        }
 
-  
 
         //update function
         public bool UpdateTest(int test_id, int grade, string note)

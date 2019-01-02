@@ -25,7 +25,20 @@ namespace BE
             }
         }
         public Gender _Gender { get => gender; set => gender = value; }
-        public string Phone_number { get => phone_number; set => phone_number = value; }
+        public string Phone_number
+        {
+            get => phone_number;
+            set
+            {
+                if (value.Length != 10)
+                    throw new Exception("the phone number must have 10 digits");
+                //check if all the string is letters
+                foreach (var letter in value.ToCharArray())
+                    if (letter < '0' || letter > '9')
+                        throw new Exception("the number must contain only digits");
+                phone_number = value;
+            }
+        }
         public Address _Address { get => address; set => address = value; }
 
         public Person(string id, string first_name, string last_name, DateTime birthdate, Gender gender, string phone_number, Address address)

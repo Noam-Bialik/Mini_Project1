@@ -1,0 +1,4 @@
+C:\Users\Noam Bialik\source\repos\Mini_Project1\Bl_imp\obj\Debug\netstandard2.0\Bl_imp.csprojAssemblyReference.cache
+C:\Users\Noam Bialik\source\repos\Mini_Project1\Bl_imp\obj\Debug\netstandard2.0\Bl_imp.csproj.CoreCompileInputs.cache
+C:\Users\Noam Bialik\source\repos\Mini_Project1\Bl_imp\obj\Debug\netstandard2.0\Bl_imp.AssemblyInfoInputs.cache
+C:\Users\Noam Bialik\source\repos\Mini_Project1\Bl_imp\obj\Debug\netstandard2.0\Bl_imp.AssemblyInfo.cs

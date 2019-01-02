@@ -1,0 +1,9 @@
+C:\Users\Noam Bialik\source\repos\Mini_Project1\Idal\bin\Debug\Idal.dll
+C:\Users\Noam Bialik\source\repos\Mini_Project1\Idal\bin\Debug\Idal.pdb
+C:\Users\Noam Bialik\source\repos\Mini_Project1\Idal\bin\Debug\BE.dll
+C:\Users\Noam Bialik\source\repos\Mini_Project1\Idal\bin\Debug\BE.pdb
+C:\Users\Noam Bialik\source\repos\Mini_Project1\Idal\obj\Debug\Idal.csprojAssemblyReference.cache
+C:\Users\Noam Bialik\source\repos\Mini_Project1\Idal\obj\Debug\Idal.csproj.CoreCompileInputs.cache
+C:\Users\Noam Bialik\source\repos\Mini_Project1\Idal\obj\Debug\Idal.csproj.CopyComplete
+C:\Users\Noam Bialik\source\repos\Mini_Project1\Idal\obj\Debug\Idal.dll
+C:\Users\Noam Bialik\source\repos\Mini_Project1\Idal\obj\Debug\Idal.pdb

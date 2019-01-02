@@ -1,0 +1,15 @@
+C:\Users\Noam Bialik\source\repos\Mini_Project1\FactoryDal\bin\Debug\FactoryDal.dll
+C:\Users\Noam Bialik\source\repos\Mini_Project1\FactoryDal\bin\Debug\FactoryDal.pdb
+C:\Users\Noam Bialik\source\repos\Mini_Project1\FactoryDal\bin\Debug\BE.dll
+C:\Users\Noam Bialik\source\repos\Mini_Project1\FactoryDal\bin\Debug\DAL.dll
+C:\Users\Noam Bialik\source\repos\Mini_Project1\FactoryDal\bin\Debug\Idal.dll
+C:\Users\Noam Bialik\source\repos\Mini_Project1\FactoryDal\bin\Debug\DS.dll
+C:\Users\Noam Bialik\source\repos\Mini_Project1\FactoryDal\bin\Debug\BE.pdb
+C:\Users\Noam Bialik\source\repos\Mini_Project1\FactoryDal\bin\Debug\DAL.pdb
+C:\Users\Noam Bialik\source\repos\Mini_Project1\FactoryDal\bin\Debug\Idal.pdb
+C:\Users\Noam Bialik\source\repos\Mini_Project1\FactoryDal\bin\Debug\DS.pdb
+C:\Users\Noam Bialik\source\repos\Mini_Project1\FactoryDal\obj\Debug\FactoryDal.csprojAssemblyReference.cache
+C:\Users\Noam Bialik\source\repos\Mini_Project1\FactoryDal\obj\Debug\FactoryDal.csproj.CoreCompileInputs.cache
+C:\Users\Noam Bialik\source\repos\Mini_Project1\FactoryDal\obj\Debug\FactoryDal.csproj.CopyComplete
+C:\Users\Noam Bialik\source\repos\Mini_Project1\FactoryDal\obj\Debug\FactoryDal.dll
+C:\Users\Noam Bialik\source\repos\Mini_Project1\FactoryDal\obj\Debug\FactoryDal.pdb

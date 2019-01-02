@@ -10,14 +10,14 @@ namespace DAL
     {
 
         void AddTester(Tester tester);// add the tester just if dont exist Tester with the same ID
-        bool RemoveTester(Tester tester);//remove (Tester) and return the removed.
-        bool RemoveTester(string id); //remove (id) and return the removed.    
+        void RemoveTester(Tester tester);//remove (Tester) and return the removed.
+        void RemoveTester(string id); //remove (id) and return the removed.    
         Tester GetTester(string id);//return the Tester with out removing.
         bool UpdateTester(Tester e);//update the Tester with the same id return true if succeed.
 
         void AddTrainee(Trainee trainee);//add the trainee just if dont exist with the same ID.
-        bool RemoveTrainee(Trainee trainee);//Remove (by Trainee) and return the removed.
-        bool RemoveTrainee(string id);// Remove (by id) and return the removed;
+        void RemoveTrainee(Trainee trainee);//Remove (by Trainee) and return the removed.
+        void RemoveTrainee(string id);// Remove (by id) and return the removed;
         Trainee GetTrainee(string id);//return the Trainee with out removing.
         bool UpdateTrainee(Trainee e);//update the Trainee with the same id return true if succeed.
 

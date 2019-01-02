@@ -77,7 +77,19 @@ namespace BE
             }
         }
         
+        public bool right_time(DateTime d)//return if the hour right to the schedule 
+        {
+            DayOfWeek temp = d.DayOfWeek;
+            if ((int)temp >= 5)
+                return false;
+            if (d.Hour >= 16)
+                return false;
+            if (schedule[(int)temp][d.Hour - 9] == false)
+                return false;
+            return true;
 
+                
+        }
         public void copy(Tester c)//copy c to the object unless the id
         {
             //copy all the person's attributes

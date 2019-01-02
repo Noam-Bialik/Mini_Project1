@@ -6,10 +6,11 @@ namespace BE
     {
        
 
-        private int test_id;
+        private long test_id;
         private string tester_id;
         private string trainee_id;
         private DateTime preferred_treinee_time;
+        private DateTime real_time;
         private Vehicle type;
         private Address preferred_treinee_address;
         private Address start_address;
@@ -17,7 +18,7 @@ namespace BE
         private int grade;// the diffult is _1_ 
         private string note;//the diffult is _null_
 
-        public Test( string tester_id, string trainee_id, DateTime preferred_treinee_time, Vehicle type, Address start_address, Address preferred_treinee_address, Address end_Address)
+        public Test(string trainee_id, DateTime preferred_treinee_time, Vehicle type, Address preferred_treinee_address, Address start_address = null, Address end_Address = null, string tester_id = null)
         {
             try
             {
@@ -55,10 +56,11 @@ namespace BE
             catch (Exception)
             { throw; }
         }*/
-        public int Test_id { get => test_id; set => test_id = value; }
+        public long Test_id { get => test_id; set => test_id = value; }
         public string Tester_id { get => tester_id; set => tester_id = value; }
         public string Trainee_id { get => trainee_id; set => trainee_id = value; }
         public DateTime Preferred_treinee_time { get => preferred_treinee_time; set => preferred_treinee_time = value; }
+        public DateTime Real_time { get => real_time; set => real_time = value; }
         public Vehicle Type { get => type; set => type = value; }
         public Address Start_address { get => start_address; set => start_address = value; }
         public Address Preferred_treinee_address { get => preferred_treinee_address; set => preferred_treinee_address = value; }
