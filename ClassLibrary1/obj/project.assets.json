@@ -200,11 +200,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Noam Bialik\\source\\repos\\Mini_Project1\\ClassLibrary1\\Ibl.csproj",
+      "projectUniqueName": "C:\\Users\\Noam Bialik\\Source\\Repos\\Mini_Project1\\ClassLibrary1\\Ibl.csproj",
       "projectName": "Ibl",
-      "projectPath": "C:\\Users\\Noam Bialik\\source\\repos\\Mini_Project1\\ClassLibrary1\\Ibl.csproj",
+      "projectPath": "C:\\Users\\Noam Bialik\\Source\\Repos\\Mini_Project1\\ClassLibrary1\\Ibl.csproj",
       "packagesPath": "C:\\Users\\Noam Bialik\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Noam Bialik\\source\\repos\\Mini_Project1\\ClassLibrary1\\obj\\",
+      "outputPath": "C:\\Users\\Noam Bialik\\Source\\Repos\\Mini_Project1\\ClassLibrary1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -223,8 +223,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "C:\\Users\\Noam Bialik\\source\\repos\\Mini_Project1\\BE\\BE.csproj": {
-              "projectPath": "C:\\Users\\Noam Bialik\\source\\repos\\Mini_Project1\\BE\\BE.csproj"
+            "C:\\Users\\Noam Bialik\\Source\\Repos\\Mini_Project1\\BE\\BE.csproj": {
+              "projectPath": "C:\\Users\\Noam Bialik\\Source\\Repos\\Mini_Project1\\BE\\BE.csproj"
             }
           }
         }
