@@ -288,12 +288,22 @@ namespace Bl_imp
                 throw;
             }
         }
-
-        public int GetTestersBySpeciality()
+        // not in the inteface
+        public IEnumerable<IGrouping<Vehicle, Tester>> GetTestersBySpeciality(bool sort = false)
         {
-            var x = from t in GetTesters()
+            if (sort)
+            {
+            return from t in GetTesters()
+                    orderby t.Speciality
                     group t by t.Speciality;
-            return 8;
+            }
+            else
+            {
+                return from t in GetTesters()
+                       group t by t.Speciality;
+            }
         }
+
+
     }
 }
