@@ -21,11 +21,20 @@ namespace DAL
                     test.Test_id = 0;
                 else
                 {
-                    var v = from i in DS.DS.Tests
+                    //looking the smallest free id 
+                    var ids = from i in DS.DS.Tests
                             orderby i.Test_id
                             select i.Test_id;
-                    long temp = v.Max();
-                    test.Test_id = temp + 1;
+                    long[] ids1 = ids.ToArray();
+
+                    for (long i = 0; i < ids1.Length; i++)
+                    {
+                        if(ids1[i] != i)
+                        {
+                            test.Test_id = i;
+                            break;
+                        }
+                    }
                 }
 
             }
@@ -62,7 +71,7 @@ namespace DAL
         }
 
         //get functions
-        public Test GetTest(int id)
+        public Test GetTest(long id)
         {
             //looking for test with the same id
             Test ret = DS.DS.Tests.Find(t => t.Test_id == id);
@@ -98,6 +107,7 @@ namespace DAL
         /// <returns></returns>
         public List<Tester> GetTesters()
         {
+           
             return new List<Tester>(DS.DS.Testers);
         }
         /// <summary>
@@ -165,7 +175,7 @@ namespace DAL
 
 
         //update function
-        public bool UpdateTest(int test_id, int grade, string note)
+        public bool UpdateTest(long test_id, int grade, string note)
         {
             Test help = DS.DS.Tests.Find(t => t.Test_id == test_id);
             if (help == null)

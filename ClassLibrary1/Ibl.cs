@@ -20,13 +20,16 @@ namespace Ibl
 
 
         void AddTest(Test test); // Add test after cheking. 
-        Test GetTest(int id);//return the Test with out removing.
+        Test GetTest(long id);//return the Test with out removing.
         bool UpdateTest(string tester_id,string trainee_id, int grade, string note);//update the test after the test with the same id return true if succeed.
 
 
-        List<Tester> GetTesters();// return list of all Testers.
-        List<Trainee> GetTrainees();//return list of all Trainees.
-        List<Test> GetTests();//return list of all Tests.
+        List<Tester> GetTesters(Predicate<Tester> condision = null);// return list of all Testers.
+        List<Trainee> GetTrainees(Predicate<Trainee> condision = null);//return list of all Trainees.
+        List<Test> GetTests(Predicate<Test> condision = null);//return list of all Tests.
 
+
+         List<Tester> InRadius(Address address, float km);//return list of testers that far more then "km".
+         List<Tester> Intime(DateTime time);//return list of all testers that free in that time.
     }
 }

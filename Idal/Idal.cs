@@ -23,8 +23,8 @@ namespace DAL
 
 
         void AddTest(Test test); // Add test after cheking. 
-        Test GetTest(int id);//return the Test with out removing.
-        bool UpdateTest(int test_id, int grade, string note);//update the test after the test with the same id return true if succeed.
+        Test GetTest(long id);//return the Test with out removing.
+        bool UpdateTest(long test_id, int grade, string note);//update the test after the test with the same id return true if succeed.
 
 
         List<Tester> GetTesters();// return list of all Testers.
