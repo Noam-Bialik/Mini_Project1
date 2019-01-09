@@ -9,8 +9,9 @@ using DS;
 
 namespace DAL
 {
-    public class Dal_imp : Idal
+    internal class Dal_imp : Idal
     {
+
         //add functions
         public void AddTest(Test test)
         {
@@ -193,7 +194,6 @@ namespace DAL
             help.copy(e);
             return true;
         }
-
         public bool UpdateTrainee(Trainee e)
         {
             //search the trainee

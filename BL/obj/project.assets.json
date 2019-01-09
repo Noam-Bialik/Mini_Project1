@@ -34,6 +34,31 @@
         "runtime": {
           "bin/placeholder/BE.dll": {}
         }
+      },
+      "DAL/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "BE": "1.0.0",
+          "DS": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DAL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DAL.dll": {}
+        }
+      },
+      "DS/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "BE": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DS.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DS.dll": {}
+        }
       }
     }
   },
@@ -185,11 +210,22 @@
       "type": "project",
       "path": "../BE/BE.csproj",
       "msbuildProject": "../BE/BE.csproj"
+    },
+    "DAL/1.0.0": {
+      "type": "project",
+      "path": "../DAL/DAL.csproj",
+      "msbuildProject": "../DAL/DAL.csproj"
+    },
+    "DS/1.0.0": {
+      "type": "project",
+      "path": "../DS/DS.csproj",
+      "msbuildProject": "../DS/DS.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
       "BE >= 1.0.0",
+      "DAL >= 1.0.0",
       "NETStandard.Library >= 2.0.3"
     ]
   },
@@ -200,11 +236,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Noam Bialik\\Source\\Repos\\Mini_Project1\\Bl_imp\\Bl_imp.csproj",
-      "projectName": "Bl_imp",
-      "projectPath": "C:\\Users\\Noam Bialik\\Source\\Repos\\Mini_Project1\\Bl_imp\\Bl_imp.csproj",
+      "projectUniqueName": "C:\\Users\\Noam Bialik\\Source\\Repos\\Mini_Project1\\BL\\BL.csproj",
+      "projectName": "BL",
+      "projectPath": "C:\\Users\\Noam Bialik\\Source\\Repos\\Mini_Project1\\BL\\BL.csproj",
       "packagesPath": "C:\\Users\\Noam Bialik\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Noam Bialik\\Source\\Repos\\Mini_Project1\\Bl_imp\\obj\\",
+      "outputPath": "C:\\Users\\Noam Bialik\\Source\\Repos\\Mini_Project1\\BL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -225,6 +261,9 @@
           "projectReferences": {
             "C:\\Users\\Noam Bialik\\Source\\Repos\\Mini_Project1\\BE\\BE.csproj": {
               "projectPath": "C:\\Users\\Noam Bialik\\Source\\Repos\\Mini_Project1\\BE\\BE.csproj"
+            },
+            "C:\\Users\\Noam Bialik\\Source\\Repos\\Mini_Project1\\DAL\\DAL.csproj": {
+              "projectPath": "C:\\Users\\Noam Bialik\\Source\\Repos\\Mini_Project1\\DAL\\DAL.csproj"
             }
           }
         }

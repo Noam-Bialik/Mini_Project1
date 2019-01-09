@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using BE;
 using DAL;
 using System.Linq;
-namespace Bl_imp
+namespace BL
 {
 
 
-    public class Bl_imp : Ibl.Ibl
+    internal class Bl_imp : Ibl
     {
         private Idal dal;
         public Bl_imp()
