@@ -291,19 +291,52 @@ namespace BL
         // not in the inteface
         public IEnumerable<IGrouping<Vehicle, Tester>> GetTestersBySpeciality(bool sort = false)
         {
-            if (sort)
+            try
             {
-            return from t in GetTesters()
-                    orderby t.Speciality
-                    group t by t.Speciality;
+                if (sort)
+                {
+                    return from t in GetTesters()
+                           orderby t.Speciality
+                           group t by t.Speciality;
+                }
+                else
+                {
+                    return from t in GetTesters()
+                           group t by t.Speciality;
+                }
             }
-            else
+            catch
             {
-                return from t in GetTesters()
-                       group t by t.Speciality;
+                throw;
             }
         }
+        /// <summary>
+        /// return testers in groups by cities.
+        /// </summary>
+        /// <param name="sort"></param>
+        /// <returns></returns>
+        public IEnumerable<IGrouping<string,Tester>> GetTestersByLocation(bool sort = false)
+        {
+            try
+            {
+                if (sort)
+                {
+                    return from t in GetTesters()
+                           orderby t._Address.City
+                           group t by t._Address.City;
+                }
+                else
+                {
 
 
+                    return from t in GetTesters()
+                           group t by t._Address.City;
+                }
+            }
+            catch
+            {
+                throw;
+            }
+        }
     }
 }
