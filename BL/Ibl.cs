@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using BE;
+using System.Linq;
 namespace BL
 {
     public interface Ibl
@@ -31,5 +32,8 @@ namespace BL
 
          List<Tester> InRadius(Address address, float km);//return list of testers that far more then "km".
          List<Tester> Intime(DateTime time);//return list of all testers that free in that time.
+         IEnumerable<IGrouping<Vehicle, Tester>> GetTestersBySpeciality(bool sort = false);//return testers in grups by spaciality.
+        IEnumerable<IGrouping<string, Tester>> GetTestersByLocation(bool sort = false);//return testers in groups by cities.
+
     }
 }

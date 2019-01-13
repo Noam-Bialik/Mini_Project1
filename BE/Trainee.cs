@@ -41,7 +41,7 @@ namespace BE
             Teacher_name = c.Teacher_name;
             Lessons_count = c.Lessons_count;
         }
-        public Trainee(string id, string first_name, string last_name, DateTime birthdate, Gender gender, string phone_number, Address address, Vehicle speciality, Gearbox gearbox, string school_name, string teacher_name, int lessons_count) : base(id, first_name, last_name, birthdate, gender, phone_number, address)
+        public Trainee(string id, string first_name, string last_name, DateTime birthdate, Gender Gender, string phone_number, Address address, Vehicle speciality, Gearbox gearbox, string school_name, string teacher_name, int lessons_count) : base(id, first_name, last_name, birthdate, Gender, phone_number, address)
         {
             _Speciality = speciality;
             _Gearbox = gearbox;

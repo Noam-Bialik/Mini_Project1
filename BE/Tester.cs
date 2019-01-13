@@ -18,7 +18,7 @@ namespace BE
         public Vehicle Speciality { get => speciality; set => speciality = value; }
         public Schedule _Schedule { get => schedule; set => schedule = new Schedule(value); }
 
-        public Tester(string id, string first_name, string last_name, DateTime birthdate, Gender gender, string phone_number, Address address, int experience, int max_tests_per_week, double max_range, Vehicle speciality, bool[][] schedule) : base(id, first_name, last_name, birthdate, gender, phone_number, address)
+        public Tester(string id, string first_name, string last_name, DateTime birthdate, Gender Gender, string phone_number, Address address, int experience, int max_tests_per_week, double max_range, Vehicle speciality, bool[][] schedule) : base(id, first_name, last_name, birthdate, Gender, phone_number, address)
         {
 
             //try to initialize the variables

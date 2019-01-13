@@ -4,6 +4,20 @@ namespace BE
 {
     public class Address
     {
+        public Address()
+        {
+            city = null;
+            street = null;
+            building_number = -1;
+        }
+
+        public Address(string _street, int _building_number,string _city)
+        {
+            city = _city;
+            street = _street;
+            building_number = _building_number;
+
+        }
         string city;
         string street;
         int building_number;

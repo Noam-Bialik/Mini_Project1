@@ -288,7 +288,11 @@ namespace BL
                 throw;
             }
         }
-        // not in the inteface
+        /// <summary>
+        /// return testers in grups by spaciality
+        /// </summary>
+        /// <param name="sort"></param>
+        /// <returns></returns>
         public IEnumerable<IGrouping<Vehicle, Tester>> GetTestersBySpeciality(bool sort = false)
         {
             try

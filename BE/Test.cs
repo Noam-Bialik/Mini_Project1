@@ -18,6 +18,18 @@ namespace BE
         private int grade;// the diffult is _1_ 
         private string note;//the diffult is _null_
 
+        public Test(string testerId, string traineeId,Address address , DateTime date = new DateTime(), long testId = -1)
+        {
+            tester_id = testerId;
+            trainee_id = traineeId;
+            if(testId != -1)
+            {
+                test_id = testId;
+            }
+            if(address.City != null)
+            start_address = address;
+        }
+
         public Test(string trainee_id, DateTime preferred_treinee_time, Vehicle type, Address preferred_treinee_address, Address start_address = null, Address end_Address = null, string tester_id = null)
         {
             try

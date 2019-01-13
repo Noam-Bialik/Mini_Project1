@@ -9,10 +9,10 @@ namespace SimpleUI
 {
     class UI
     {
-        private static IBL bl = BL.FactoryBl.getBl();
+        private static Ibl bl = FactoryBL.GetInstance();
         static bool done(Test t)
         {
-            if (t.grade != null)
+            if (t.Grade==-1)
                 return true;
             else
                 return false;
@@ -20,7 +20,7 @@ namespace SimpleUI
         private static int InPutNum()
         {
             int x;
-            Console.WriteLine("0-quit \n 1-add trainee \n 2-add tester \n 3-add test \n 4-update trainee \n 5-update tester \n 6-update test \n 7-all trainees \n 8-all testers \n 9-all tests \n 10-testers in area \n 11-testers available on time \n 12- number of tests for trainee \n 13-to check if a trainee have a license \n 14-to get all the test by a date \n 15-all testers by expertise \n 16-all trainees by school \n 17-all trainees by teacher \n 18-all trainees by tests number \n 19-all tests that done \n 20-remove trainee \n 21- remove tester ");
+            Console.WriteLine("0-quit \n 1-add trainee \n 2-add tester \n 3-add test \n 4-update trainee \n 5-update tester \n 6-update test \n 7-all trainees \n 8-all testers \n 9-all tests \n 10-testers in area \n 11-testers available on time \n 12- number of tests for trainee **not available in this version** \n 13-to check if a trainee have a license **not available in this version**  \n 14-to get all the tests by Preferred_treinee_time \n 15-all testers by expertise **not available in this version**  \n 16-all trainees in spesific school \n 17-all trainees by teacher **not available in this version**  \n 18-all trainees by tests number  **not available in this version**   \n 19-all tests that done \n 20-remove trainee \n 21- remove tester ");
             string a = Console.ReadLine();
             x = int.Parse(a);
             return x;
@@ -49,9 +49,9 @@ namespace SimpleUI
                             string first_name = Console.ReadLine();
                             Console.WriteLine("enter trainee's date of birth:(dd/mm/yy)");
                             DateTime date_of_birth = DateTime.Parse(Console.ReadLine());
-                            Console.WriteLine("enter trainee's gender:");
+                            Console.WriteLine("enter trainee's Gender:");
                             string _Gender = Console.ReadLine();
-                            gender Gender = (gender)Enum.Parse(typeof(gender), _Gender);
+                            Gender Gender = (Gender)Enum.Parse(typeof(Gender), _Gender);
                             Console.WriteLine("enter trainee's phone number:");
                             long phone = long.Parse(Console.ReadLine());
                             Console.WriteLine("the address of the test: \n");
@@ -62,19 +62,20 @@ namespace SimpleUI
                             Console.WriteLine("enter house number");
                             int house_number = int.Parse(Console.ReadLine());
                             Address address = new Address(street, house_number, city);
-                            Console.WriteLine("which vehicle the trainee learn?(private_vehicle,two_weels_vehicle,medium_track, heavy_track)");
-                            string _learn_vehicle = Console.ReadLine();
-                            vehicle learn_vehicle = (vehicle)Enum.Parse(typeof(vehicle), _learn_vehicle);
+                            Console.WriteLine("which Vehicle the trainee learn?(private_Vehicle,two_weels_Vehicle,medium_track, heavy_track)");
+                            string _learn_Vehicle = Console.ReadLine();
+                            Vehicle learn_Vehicle = (Vehicle)Enum.Parse(typeof(Vehicle), _learn_Vehicle);
                             Console.WriteLine("what kind of gearbox? (auto or manual )");
                             string _gearbox = Console.ReadLine();
-                            kind_of_gearbox gearbox = (kind_of_gearbox)Enum.Parse(typeof(kind_of_gearbox), _gearbox);
+                            Gearbox gearbox = (Gearbox)Enum.Parse(typeof(Gearbox), _gearbox);
                             Console.WriteLine("enter trainee's school:");
                             string school = Console.ReadLine();
                             Console.WriteLine("enter trainee's teacher name:");
                             string teacher_name = Console.ReadLine();
                             Console.WriteLine("how many lessons the trainee did?");
                             int num_of_lessons = int.Parse(Console.ReadLine());
-                            bl.add_trainee(id, last_name, first_name, date_of_birth, Gender, phone, address, learn_vehicle, gearbox, school, teacher_name, num_of_lessons);
+                            Trainee trainee = new Trainee(id.ToString(), first_name, last_name, date_of_birth, Gender, phone.ToString(), address, learn_Vehicle, gearbox, school, teacher_name, num_of_lessons);
+                            bl.AddTrainee(trainee);
                         }
                         catch (Exception e)
                         {
@@ -92,9 +93,9 @@ namespace SimpleUI
                             string first_name = Console.ReadLine();
                             Console.WriteLine("enter tester's date of birth:");
                             DateTime date_of_birth = DateTime.Parse(Console.ReadLine());
-                            Console.WriteLine("enter tester's gender:");
+                            Console.WriteLine("enter tester's Gender:");
                             string _Gender = Console.ReadLine();
-                            gender Gender = (gender)Enum.Parse(typeof(gender), _Gender);
+                            Gender Gender = (Gender)Enum.Parse(typeof(Gender), _Gender);
                             Console.WriteLine("enter phone number:");
                             long phone = long.Parse(Console.ReadLine());
                             Console.WriteLine("the address of the tester: \n");
@@ -111,7 +112,7 @@ namespace SimpleUI
                             int max_test_per_week = int.Parse(Console.ReadLine());
                             Console.WriteLine("enter tester's expertise:");
                             string _tester_expertise = Console.ReadLine();
-                            vehicle tester_expertise = (vehicle)Enum.Parse(typeof(vehicle), _tester_expertise);
+                            Vehicle tester_expertise = (Vehicle)Enum.Parse(typeof(Vehicle), _tester_expertise);
                             Console.WriteLine("enter tester's work time (true/false) ");
                             bool[,] work_time = new bool[5, 6];
                             for (int i = 0; i < 5; i++)
@@ -125,8 +126,10 @@ namespace SimpleUI
                             }
                             Console.WriteLine("enter tester's max way to go");
                             int max_way = int.Parse(Console.ReadLine());
+                            //??????????????????????אני לא יודע איך לשלוח את המערך bool
 
-                            bl.add_tester(id, last_name, first_name, date_of_birth, Gender, phone, address, expirence, max_test_per_week, tester_expertise, work_time, max_way);
+                            Tester tester = new Tester(id.ToString(),first_name,last_name,date_of_birth,Gender,phone.ToString(),address,(int)expirence,max_test_per_week,max_way,tester_expertise,work_time);
+                            bl.AddTester(tester);
                         }//
                         catch (Exception e)
                         {
@@ -153,7 +156,8 @@ namespace SimpleUI
                             Console.WriteLine("enter house number");
                             int house_number = int.Parse(Console.ReadLine());
                             Address address = new Address(street, house_number, city);
-                            bl.add_test(teseter_id, trainee_id, temp, address);
+                            Test test = new Test(teseter_id.ToString(), trainee_id.ToString(), address ,temp);
+                            bl.AddTest(test);
                         }
                         catch (Exception e)
                         {
@@ -171,9 +175,9 @@ namespace SimpleUI
                             string first_name = Console.ReadLine();
                             Console.WriteLine("enter trainee's date of birth:");
                             DateTime date_of_birth = DateTime.Parse(Console.ReadLine());
-                            Console.WriteLine("enter trainee's gender:");
+                            Console.WriteLine("enter trainee's Gender:");
                             string _Gender = Console.ReadLine();
-                            gender Gender = (gender)Enum.Parse(typeof(gender), _Gender);
+                            Gender Gender = (Gender)Enum.Parse(typeof(Gender), _Gender);
                             Console.WriteLine("enter trainee's phone number:");
                             long phone = long.Parse(Console.ReadLine());
                             Console.WriteLine("the address of the test: \n");
@@ -184,20 +188,20 @@ namespace SimpleUI
                             Console.WriteLine("enter house number");
                             int house_number = int.Parse(Console.ReadLine());
                             Address address = new Address(street, house_number, city);
-                            Console.WriteLine("which vehicle the trainee learn?(private_vehicle,two_weels_vehicle,medium_track, heavy_track)");
-                            string _learn_vehicle = Console.ReadLine();
-                            vehicle learn_vehicle = (vehicle)Enum.Parse(typeof(vehicle), _learn_vehicle);
+                            Console.WriteLine("which Vehicle the trainee learn?(private_Vehicle,two_weels_Vehicle,medium_track, heavy_track)");
+                            string _learn_Vehicle = Console.ReadLine();
+                            Vehicle learn_Vehicle = (Vehicle)Enum.Parse(typeof(Vehicle), _learn_Vehicle);
                             Console.WriteLine("what kind of gearbox? (auto or manual )");
                             string _gearbox = Console.ReadLine();
-                            kind_of_gearbox gearbox = (kind_of_gearbox)Enum.Parse(typeof(kind_of_gearbox), _gearbox);
+                            Gearbox gearbox = (Gearbox)Enum.Parse(typeof(Gearbox), _gearbox);
                             Console.WriteLine("enter trainee's school:");
                             string school = Console.ReadLine();
                             Console.WriteLine("enter trainee's teacher name:");
                             string teacher_name = Console.ReadLine();
                             Console.WriteLine("how many lessons the trainee did?");
                             int num_of_lessons = int.Parse(Console.ReadLine());
-
-                            bl.update_trainee(id, last_name, first_name, date_of_birth, Gender, phone, address, learn_vehicle, gearbox, school, teacher_name, num_of_lessons);
+                            Trainee trainee = new Trainee(id.ToString(), first_name, last_name, date_of_birth, Gender, phone.ToString(), address, learn_Vehicle, gearbox, school, teacher_name, num_of_lessons);
+                            bl.UpdateTrainee(trainee);
                         }
                         catch (Exception e)
                         {
@@ -215,9 +219,9 @@ namespace SimpleUI
                             string first_name = Console.ReadLine();
                             Console.WriteLine("enter tester's date of birth:");
                             DateTime date_of_birth = DateTime.Parse(Console.ReadLine());
-                            Console.WriteLine("enter tester's gender:");
+                            Console.WriteLine("enter tester's Gender:");
                             string _Gender = Console.ReadLine();
-                            gender Gender = (gender)Enum.Parse(typeof(gender), _Gender);
+                            Gender Gender = (Gender)Enum.Parse(typeof(Gender), _Gender);
                             long phone = long.Parse(Console.ReadLine());
                             Console.WriteLine("the address of the test: \n");
                             Console.WriteLine("enter city");
@@ -233,7 +237,7 @@ namespace SimpleUI
                             int max_test_per_week = int.Parse(Console.ReadLine());
                             Console.WriteLine("enter tester's expertise:");
                             string _tester_expertise = Console.ReadLine();
-                            vehicle tester_expertise = (vehicle)Enum.Parse(typeof(vehicle), _tester_expertise);
+                            Vehicle tester_expertise = (Vehicle)Enum.Parse(typeof(Vehicle), _tester_expertise);
                             Console.WriteLine("enter tester's work time (true/false) ");
                             bool[,] work_time = new bool[5, 6];
                             for (int i = 0; i < 5; i++)
@@ -247,8 +251,9 @@ namespace SimpleUI
                             }
                             Console.WriteLine("enter tester's max way to go");
                             int max_way = int.Parse(Console.ReadLine());
+                            Tester tester = new Tester(id.ToString(), first_name, last_name, date_of_birth, Gender, phone.ToString(), address, (int)expirence, max_test_per_week, max_way, tester_expertise, work_time);
 
-                            bl.update_tester(id, last_name, first_name, date_of_birth, Gender, phone, address, expirence, max_test_per_week, tester_expertise, work_time, max_way);
+                            bl.UpdateTester(tester);
                         }
                         catch (Exception e)
                         {
@@ -258,8 +263,8 @@ namespace SimpleUI
                     case 6:
                         try
                         {
-                            Console.WriteLine("enter test's id:");
-                            int id = int.Parse(Console.ReadLine());
+                            Console.WriteLine("enter tester's id:");//אני החלפתי (הוא ביקש את המס' מבחן ואני את מספר בוחן)י
+                            int id_tester = int.Parse(Console.ReadLine());
                             Console.WriteLine("enter trainee's id:");
                             int id_trainee = int.Parse(Console.ReadLine());
                             Console.WriteLine("enter true or false \n the trainee take good distance?");
@@ -276,8 +281,12 @@ namespace SimpleUI
                             bool grade = bool.Parse(Console.ReadLine());
                             Console.WriteLine("you can enter a mention if you want to");
                             string mention = Console.ReadLine();
-
-                            bl.update_test(id, id_trainee, distance, reverse, mirrors, signals, crosswalk, grade, mention);
+                            int passed = 0;
+                            if (grade)
+                                passed = 100;
+                           bool worked =  bl.UpdateTest(id_tester.ToString(),id_trainee.ToString(),passed,mention);
+                            if(worked == false)
+                                Console.WriteLine("!!  NOT FOUND  !!");
                         }
                         catch (Exception e)
                         {
@@ -287,9 +296,12 @@ namespace SimpleUI
                     case 7:
                         try
                         {
-                            for (int i = 0; i < bl.all_trainee().Count; i++)
+                            List<Trainee> allTrainee = bl.GetTrainees();
+                            if (allTrainee == null)
+                                throw new Exception("no traine");
+                            for (int i = 0; i < allTrainee.Count; i++)
                             {
-                                Console.WriteLine(bl.all_trainee()[i] + "\n");
+                                Console.WriteLine(allTrainee[i] + "\n");
                             }
                         }
                         catch (Exception e)
@@ -300,9 +312,12 @@ namespace SimpleUI
                     case 8:
                         try
                         {
-                            for (int i = 0; i < bl.all_tester().Count; i++)
+                            List<Tester> allTesters = bl.GetTesters();
+                            if (allTesters == null)
+                                throw new Exception("no tester");
+                            for (int i = 0; i <allTesters.Count; i++)
                             {
-                                Console.WriteLine(bl.all_tester()[i] + "\n");
+                                Console.WriteLine(allTesters[i] + "\n");
                             }
                         }
                         catch (Exception e)
@@ -313,9 +328,12 @@ namespace SimpleUI
                     case 9:
                         try
                         {
-                            for (int i = 0; i < bl.all_test().Count; i++)
+                            List<Test> allTests = bl.GetTests();
+                            if (allTests == null)
+                                throw new Exception("no test");
+                            for (int i = 0; i <allTests.Count; i++)
                             {
-                                Console.WriteLine(bl.all_test()[i] + "\n");
+                                Console.WriteLine(allTests[i] + "\n");
                             }
                         }
                         catch (Exception e)
@@ -332,11 +350,14 @@ namespace SimpleUI
                             string street = Console.ReadLine();
                             Console.WriteLine("enter house number");
                             int house_number = int.Parse(Console.ReadLine());
-                            Console.WriteLine("enter distance");
+                            Console.WriteLine("enter distance in km");
                             int x = int.Parse(Console.ReadLine());
-                            for (int i = 0; i < bl.testers_area(new Address(street, house_number, city), x).Count; i++)
+                            List<Tester> testers = bl.InRadius(new Address(street, house_number, city), x);
+                            if (testers == null)
+                                throw new Exception("no tester in the current radius");
+                            for (int i = 0; i < testers.Count; i++)
                             {
-                                Console.WriteLine(bl.testers_area(new Address(street, house_number, city), x)[i] + "\n");
+                                Console.WriteLine(testers[i] + "\n");
                             }
 
                         }
@@ -352,9 +373,13 @@ namespace SimpleUI
                             string date_and_hour = Console.ReadLine();
                             DateTime temp = new DateTime();
                             temp = DateTime.Parse(date_and_hour);
-                            for (int i = 0; i < bl.test_on_date(temp).Count; i++)
+
+                            List<Tester> testers = bl.Intime(temp);
+                            if (testers == null)
+                                throw new Exception("no tester in the current time");
+                            for (int i = 0; i < testers.Count; i++)
                             {
-                                Console.WriteLine(bl.test_on_date(temp)[i]);
+                                Console.WriteLine(testers[i]);
                             }
                         }
                         catch (Exception e)
@@ -365,9 +390,10 @@ namespace SimpleUI
                     case 12:
                         try
                         {
-                            Console.WriteLine("enter trainee's id");
+                            throw new Exception("not available in this version");
+                           /* Console.WriteLine("enter trainee's id");
                             int id = int.Parse(Console.ReadLine());
-                            Console.WriteLine(bl.trainee_tests(id));
+                            Console.WriteLine(bl.trainee_tests(id));*/
 
                         }
                         catch (Exception e)
@@ -378,9 +404,10 @@ namespace SimpleUI
                     case 13:
                         try
                         {
-                            Console.WriteLine("enter trainee's id");
+                            throw new Exception("not available in this version");
+                            /*Console.WriteLine("enter trainee's id");
                             int id = int.Parse(Console.ReadLine());
-                            Console.WriteLine(bl.pass(id));
+                            Console.WriteLine(bl.pass(id));*/
                         }
                         catch (Exception e)
                         {
@@ -392,9 +419,12 @@ namespace SimpleUI
                         {
                             Console.WriteLine("enter a date:(dd//mm/yy)");
                             DateTime date = DateTime.Parse(Console.ReadLine());
-                            for (int i = 0; i < bl.test_on_date(date).Count; i++)
+                            List<Test> tests = bl.GetTests(t => t.Preferred_treinee_time == date);
+                            if (tests == null)
+                                throw new Exception("didn't find any Preferred_treinee_time! ");
+                            for (int i = 0; i <tests.Count; i++)
                             {
-                                Console.WriteLine(bl.test_on_date(date)[i]);
+                                Console.WriteLine(tests[i]);
                             }
 
                         }
@@ -406,6 +436,8 @@ namespace SimpleUI
                     case 15:
                         try
                         {
+                            throw new Exception("not available in this version! ");
+                            /*
                             Console.WriteLine("do you want to sort by tester's expertise? (true/false)");
                             bool sort = bool.Parse(Console.ReadLine());
                             foreach (var item in bl.by_tester_expertice(sort))
@@ -415,7 +447,7 @@ namespace SimpleUI
                                 {
                                     Console.WriteLine(t);
                                 }
-                            }
+                            }*/
                         }
                         catch (Exception e)
                         {
@@ -425,26 +457,28 @@ namespace SimpleUI
                     case 16:
                         try
                         {
-                            Console.WriteLine("do you want to sort by school? (true/false)");
-                            bool sort = bool.Parse(Console.ReadLine());
-                            foreach (var item in bl.by_school(sort))
+                            Console.WriteLine("please write the school name:");
+                            string school_name  = Console.ReadLine();
+                            List<Trainee> trainees = bl.GetTrainees(t => t.School_name == school_name);
+                            if (trainees == null)
+                                throw new Exception(school_name + " have no trainees");
+                            foreach (var item in trainees)
                             {
-                                Console.WriteLine(item.Key + ":");
-                                foreach (Trainee t in item)
-                                {
-                                    Console.WriteLine(t);
-                                }
+                                Console.WriteLine(item);
+                               
                             }
 
                         }
                         catch (Exception e)
                         {
                             Console.WriteLine(e.Message + "\n");
-                        }//return all trainees by school
+                        }//return all trainees in apesific school
                         break;
                     case 17:
                         try
                         {
+                            throw new Exception("not available in this version! ");
+                            /*
                             Console.WriteLine("do you want to sort by teacher? (true/false)");
                             bool sort = bool.Parse(Console.ReadLine());
                             foreach (var item in bl.by_teacher(sort))
@@ -454,7 +488,7 @@ namespace SimpleUI
                                 {
                                     Console.WriteLine(t);
                                 }
-                            }
+                            }*/
 
                         }
                         catch (Exception e)
@@ -465,6 +499,8 @@ namespace SimpleUI
                     case 18:
                         try
                         {
+                            throw new Exception("not available in this version! ");
+                            /*
                             Console.WriteLine("do you want to sort by test number? (true/false)");
                             bool sort = bool.Parse(Console.ReadLine());
                             foreach (var item in bl.by_tests_num(sort))
@@ -475,6 +511,7 @@ namespace SimpleUI
                                     Console.WriteLine(t);
                                 }
                             }
+                            */
                         }
                         catch (Exception e)
                         {
@@ -484,9 +521,12 @@ namespace SimpleUI
                     case 19:
                         try
                         {
-                            for (int i = 0; i < bl.find_all_tests(done).Count; i++)
+                            List<Test> tests = bl.GetTests(t => t.Grade != 1);//1 is the default.
+                            if (tests == null)
+                                throw new Exception("no test have done in the system");
+                            for (int i = 0; i < tests.Count; i++)
                             {
-                                Console.WriteLine(bl.find_all_tests(done)[i]);
+                                Console.WriteLine(tests[i]);
                             }
 
                         }
@@ -500,19 +540,18 @@ namespace SimpleUI
                         {
                             Console.WriteLine("enter id:");
                             int x = int.Parse(Console.ReadLine());
-                            bl.remove_trainee(x);
-                        }
+                            bl.RemoveTrainee(x.ToString());                        }
                         catch (Exception e)
                         {
                             Console.WriteLine(e.Message + "\n");
-                        }
+                        }//remove trainee by id
                         break;
                     case 21:
                         try
                         {
                             Console.WriteLine("enter id:");
                             int x = int.Parse(Console.ReadLine());
-                            bl.remove_tester(x);
+                            bl.RemoveTester(x.ToString());
                         }
                         catch (Exception e)
                         {

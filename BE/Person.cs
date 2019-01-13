@@ -9,7 +9,7 @@ namespace BE
         private string first_name;
         private string last_name;
         private DateTime birthdate;
-        private Gender gender;
+        private Gender Gender;
         private string phone_number;
         private Address address;
 
@@ -24,7 +24,7 @@ namespace BE
                 birthdate = new DateTime(value.Year, value.Month, value.Day);
             }
         }
-        public Gender _Gender { get => gender; set => gender = value; }
+        public Gender _Gender { get => Gender; set => Gender = value; }
         public string Phone_number
         {
             get => phone_number;
@@ -41,13 +41,13 @@ namespace BE
         }
         public Address _Address { get => address; set => address = value; }
 
-        public Person(string id, string first_name, string last_name, DateTime birthdate, Gender gender, string phone_number, Address address)
+        public Person(string id, string first_name, string last_name, DateTime birthdate, Gender Gender, string phone_number, Address address)
         {
             Id = id;
             First_name = first_name;
             Last_name = last_name;
             Birthdate = birthdate;
-            _Gender = gender;
+            _Gender = Gender;
             Phone_number = phone_number;
             _Address = address;
         }
