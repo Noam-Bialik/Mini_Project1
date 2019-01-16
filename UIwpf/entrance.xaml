@@ -11,7 +11,10 @@
     </UserControl.Background>
 
     <Grid >
-        
+        <Grid.Background>
+            <ImageBrush ImageSource="images/background2.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+
 
 
 

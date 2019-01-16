@@ -13,31 +13,19 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using BE;
-using BL;
-
 
 namespace UIwpf
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for PersonUserControl.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class PersonUserControl : UserControl
     {
-        public MainWindow()
+        public PersonUserControl()
         {
             InitializeComponent();
-
-            
-        }
-
-        private void Entrance_Loaded(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void UserControl1_Loaded(object sender, RoutedEventArgs e)
-        {
-
+            //bild GenderListBox
+         
         }
     }
 }

@@ -122,3 +122,7 @@ C:\Users\Noam Bialik\Source\Repos\Mini_Project1\UIwpf\bin\Debug\DS.pdb
 C:\Users\Noam Bialik\Source\Repos\Mini_Project1\UIwpf\obj\Debug\UIwpf.exe.config
 C:\Users\Noam Bialik\Source\Repos\Mini_Project1\UIwpf\obj\Debug\UIwpf.csproj.CopyComplete
 C:\Users\Noam Bialik\Source\Repos\Mini_Project1\UIwpf\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Noam Bialik\Source\Repos\Mini_Project1\UIwpf\obj\Debug\AddTrainee.g.cs
+C:\Users\Noam Bialik\Source\Repos\Mini_Project1\UIwpf\obj\Debug\AddTrainee.baml
+C:\Users\Noam Bialik\Source\Repos\Mini_Project1\UIwpf\obj\Debug\PersonUserControl.g.cs
+C:\Users\Noam Bialik\Source\Repos\Mini_Project1\UIwpf\obj\Debug\PersonUserControl.baml

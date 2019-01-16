@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Noam Bialik\Source\Repos\Mini_Project1\UIwpf\App.xaml
-3928016868
+4-664073187
 
-114089487
+12-853862054
 121-339809273
-entrance.xaml;MainWindow.xaml;add_trainee.xaml;
+AddTrainee.xaml;entrance.xaml;MainWindow.xaml;PersonUserControl.xaml;
 
-True
+False
 

@@ -8,8 +8,9 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
 
-        <local:entrance Loaded="Entrance_Loaded"></local:entrance>
-
+        <local:AddTrainee/>
+       
+        
 
     </Grid>
 </Window>
