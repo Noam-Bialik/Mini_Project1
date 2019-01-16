@@ -6,7 +6,7 @@ namespace BE
 {
     public enum Vehicle
     {
-        Privte, TwoWheeles, MediumTruck, HeavyTruck,
+        Private, TwoWheeles, MediumTruck, HeavyTruck
     }
     public enum Gearbox
     {

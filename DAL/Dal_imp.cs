@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Linq;
 using BE;
 using DS;
 
@@ -55,7 +54,7 @@ namespace DAL
             //check if exist tester with the same id
             Tester help = DS.DS.Testers.Find(t => t.Id == tester.Id);
             if (help != null)
-                throw new Exception("test with the same id already exist");
+                throw new Exception("tester with the same id already exist");
 
             //if the id don't exist add the test
             DS.DS.Testers.Add(tester);
@@ -65,7 +64,7 @@ namespace DAL
             //check if exist trainee with the same id
             Trainee help = DS.DS.Trainees.Find(t => t.Id == trainee.Id);
             if (help != null)
-                throw new Exception("test with the same id already exist");
+                throw new Exception("trainee with the same id already exist");
 
             //if the id don't exist add the test
             DS.DS.Trainees.Add(trainee);

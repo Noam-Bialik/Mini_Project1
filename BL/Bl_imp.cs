@@ -14,10 +14,9 @@ namespace BL
         {
             dal = FactoryDal.GetInstance();
         }
-        private int distance(Address a, Address b)//return in km
+        private int distance(Address a, Address b)//distance in km
         {
-            Random r = new Random();
-            return r.Next(0, 500);
+            return 1;
         } 
 
         public void AddTest(Test test)
@@ -30,10 +29,15 @@ namespace BL
             //find the diffrence between the last test and the preferred treinee time
             var a = from t in GetTests(t=>t.Trainee_id == id)
                     select t.Preferred_treinee_time;
+            if(a.Count()!=0)
+            {
             DateTime last = a.Max();
             TimeSpan diffrence = test.Preferred_treinee_time - last;
+            if (last >= DateTime.Now)
+                throw new Exception("alredy have a test");
             if (diffrence.Days <= 30)
                 throw new Exception("the interval time between the test must be at least 30 days");
+            }
             //info adding
 
             List<Tester> optionalTestersTime = Intime(test.Preferred_treinee_time);
@@ -141,21 +145,54 @@ namespace BL
             }
         }
 
-        public List<Tester> GetTesters(Predicate<Tester> condision = null)
+        public List<Tester> GetTesters(Predicate<Tester> condition = null)
         {
-            return dal.GetTesters().FindAll(condision);
+            List<Tester> ret = dal.GetTesters();
+            if (condition == null)
+                return ret;
+            try
+            {
+                return ret.FindAll(condition);
+            }
+            catch (Exception)
+            {
+
+                return new List<Tester>();
+            }
         }
 
-        public List<Test> GetTests(Predicate<Test> condision = null)
+        public List<Test> GetTests(Predicate<Test> condition = null)
         {
-            return dal.GetTests().FindAll(condision);
+            List<Test> ret = dal.GetTests();
+            if (condition == null)
+                return ret;
+            try
+            {
+                return ret.FindAll(condition);
+            }
+            catch (Exception)
+            {
+
+                return new List<Test>();
+            }
         }
 
-
-        public List<Trainee> GetTrainees(Predicate<Trainee> condision = null)
+        public List<Trainee> GetTrainees(Predicate<Trainee> condition = null)
         {
-            return dal.GetTrainees().FindAll(condision);
+            List<Trainee> ret = dal.GetTrainees();
+            if (condition == null)
+                return ret;
+            try
+            {
+                return ret.FindAll(condition);
+            }
+            catch (Exception)
+            {
+
+                return new List<Trainee>();
+            }
         }
+
 
         public void RemoveTester(Tester tester)
         {
@@ -342,5 +379,6 @@ namespace BL
                 throw;
             }
         }
+
     }
 }

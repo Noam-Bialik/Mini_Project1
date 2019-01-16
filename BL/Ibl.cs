@@ -25,10 +25,10 @@ namespace BL
         bool UpdateTest(string tester_id,string trainee_id, int grade, string note);//update the test after the test with the same id return true if succeed.
 
 
-        List<Tester> GetTesters(Predicate<Tester> condision = null);// return list of all Testers.
-        List<Trainee> GetTrainees(Predicate<Trainee> condision = null);//return list of all Trainees.
-        List<Test> GetTests(Predicate<Test> condision = null);//return list of all Tests.
-
+        List<Tester> GetTesters(Predicate<Tester> condition = null);// return list of all Testers.
+        List<Trainee> GetTrainees(Predicate<Trainee> condition = null);//return list of all Trainees.
+        List<Test> GetTests(Predicate<Test> condition = null);//return list of all Tests.
+        //removetest - by test id.
 
          List<Tester> InRadius(Address address, float km);//return list of testers that far more then "km".
          List<Tester> Intime(DateTime time);//return list of all testers that free in that time.

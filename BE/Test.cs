@@ -18,16 +18,13 @@ namespace BE
         private int grade;// the diffult is _1_ 
         private string note;//the diffult is _null_
 
-        public Test(string testerId, string traineeId,Address address , DateTime date = new DateTime(), long testId = -1)
+        public Test(string traineeId,Address address , DateTime date, long testId = -1)
         {
-            tester_id = testerId;
             trainee_id = traineeId;
-            if(testId != -1)
-            {
-                test_id = testId;
-            }
-            if(address.City != null)
-            start_address = address;
+
+            test_id = testId;
+            Preferred_treinee_address = address;
+            Preferred_treinee_time = date;
         }
 
         public Test(string trainee_id, DateTime preferred_treinee_time, Vehicle type, Address preferred_treinee_address, Address start_address = null, Address end_Address = null, string tester_id = null)
@@ -52,7 +49,7 @@ namespace BE
         public long Test_id { get => test_id; set => test_id = value; }
         public string Tester_id { get => tester_id; set => tester_id = value; }
         public string Trainee_id { get => trainee_id; set => trainee_id = value; }
-        public DateTime Preferred_treinee_time { get => preferred_treinee_time; set => preferred_treinee_time = value; }
+        public DateTime Preferred_treinee_time { get => preferred_treinee_time; set => preferred_treinee_time = new DateTime(value.Year,value.Month,value.Day,value.Hour,value.Minute,value.Second); }
       //  public DateTime Real_time { get => real_time; set => real_time = value; }
         public Vehicle Type { get => type; set => type = value; }
         public Address Start_address { get => start_address; set => start_address = value; }

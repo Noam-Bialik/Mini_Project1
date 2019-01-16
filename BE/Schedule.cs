@@ -17,7 +17,7 @@ namespace BE
             {
                 first_Day = c.first_Day;
                 schedule = new bool[5][];
-                for (int i = 0; i < 7; i++)
+                for (int i = 0; i < 6; i++)
                 {
                     schedule[i] = new bool[6];
                     for (int j = 0; j < 6; j++)
@@ -28,7 +28,7 @@ namespace BE
             {
                 First_Day = first_Day;
                 this.schedule = new bool[5][];
-                for (int i = 0; i < 7; i++)
+                for (int i = 0; i < 6; i++)
                 {
                     this.schedule[i] = new bool[6];
                     for (int j = 0; j < 6; j++)
@@ -108,7 +108,7 @@ namespace BE
         {
             weeks = new List<week>();
             this.schedule = new bool[5][];
-            for (int i = 0; i < 7; i++)
+            for (int i = 0; i < 5; i++)
             {
                 this.schedule[i] = new bool[6];
                 for (int j = 0; j < 6; j++)
@@ -119,7 +119,7 @@ namespace BE
         {
             weeks = new List<week>(c.weeks);
             schedule = new bool[5][];
-            for (int i = 0; i < 7; i++)
+            for (int i = 0; i < 6; i++)
             {
                 schedule[i] = new bool[6];
                 for (int j = 0; j < 6; j++)
@@ -231,7 +231,7 @@ namespace BE
         {
             bool[][] ret;
             ret = new bool[5][];
-            for (int i = 0; i < 7; i++)
+            for (int i = 0; i < 6; i++)
             {
                 ret[i] = new bool[6];
                 for (int j = 0; j < 6; j++)
@@ -241,7 +241,7 @@ namespace BE
             week current = weeks.Find(w => week.first_day_of_week(d) == w.First_Day);
             if (current == null)
                 return ret;
-            for (int i = 0; i < 7; i++)
+            for (int i = 0; i < 6; i++)
             {
                 for (int j = 0; j < 6; j++)
                     ret[i][j] = current.schedule[i][j];
