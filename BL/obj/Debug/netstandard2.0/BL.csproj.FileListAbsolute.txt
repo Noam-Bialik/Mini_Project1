@@ -14,3 +14,19 @@ C:\Users\Noam Bialik\Source\Repos\Mini_Project1\BL\obj\Debug\netstandard2.0\BL.A
 C:\Users\Noam Bialik\Source\Repos\Mini_Project1\BL\obj\Debug\netstandard2.0\BL.csproj.CopyComplete
 C:\Users\Noam Bialik\Source\Repos\Mini_Project1\BL\obj\Debug\netstandard2.0\BL.dll
 C:\Users\Noam Bialik\Source\Repos\Mini_Project1\BL\obj\Debug\netstandard2.0\BL.pdb
+C:\Users\אביעד\Desktop\Mini_Project1\BL\bin\Debug\netstandard2.0\BL.deps.json
+C:\Users\אביעד\Desktop\Mini_Project1\BL\bin\Debug\netstandard2.0\BL.dll
+C:\Users\אביעד\Desktop\Mini_Project1\BL\bin\Debug\netstandard2.0\BL.pdb
+C:\Users\אביעד\Desktop\Mini_Project1\BL\bin\Debug\netstandard2.0\BE.dll
+C:\Users\אביעד\Desktop\Mini_Project1\BL\bin\Debug\netstandard2.0\DAL.dll
+C:\Users\אביעד\Desktop\Mini_Project1\BL\bin\Debug\netstandard2.0\DS.dll
+C:\Users\אביעד\Desktop\Mini_Project1\BL\bin\Debug\netstandard2.0\BE.pdb
+C:\Users\אביעד\Desktop\Mini_Project1\BL\bin\Debug\netstandard2.0\DAL.pdb
+C:\Users\אביעד\Desktop\Mini_Project1\BL\bin\Debug\netstandard2.0\DS.pdb
+C:\Users\אביעד\Desktop\Mini_Project1\BL\obj\Debug\netstandard2.0\BL.csprojAssemblyReference.cache
+C:\Users\אביעד\Desktop\Mini_Project1\BL\obj\Debug\netstandard2.0\BL.csproj.CoreCompileInputs.cache
+C:\Users\אביעד\Desktop\Mini_Project1\BL\obj\Debug\netstandard2.0\BL.AssemblyInfoInputs.cache
+C:\Users\אביעד\Desktop\Mini_Project1\BL\obj\Debug\netstandard2.0\BL.AssemblyInfo.cs
+C:\Users\אביעד\Desktop\Mini_Project1\BL\obj\Debug\netstandard2.0\BL.csproj.CopyComplete
+C:\Users\אביעד\Desktop\Mini_Project1\BL\obj\Debug\netstandard2.0\BL.dll
+C:\Users\אביעד\Desktop\Mini_Project1\BL\obj\Debug\netstandard2.0\BL.pdb
