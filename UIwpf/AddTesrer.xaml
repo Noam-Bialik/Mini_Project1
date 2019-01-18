@@ -32,7 +32,7 @@
             <TextBlock Text="Max Range(km)" Grid.Row="2"  FontSize="15" Foreground="Indigo" FontWeight="Bold"/>
             <TextBox Name ="MaxRangeInput" Text="0" Grid.Row="2" Grid.Column="1"/>
             <TextBlock Text="Speciality" Grid.Row="3" FontSize="15" Foreground="Indigo" FontWeight="Bold"/>
-            <ComboBox Grid.Row="3" Grid.Column="1">
+            <ComboBox Name="SpecialityInput" Grid.Row="3" Grid.Column="1">
                 <ComboBoxItem Content="Private"/>
                 <ComboBoxItem Content="TwoWheeles"/>
                 <ComboBoxItem Content="MediumTruck"/>
