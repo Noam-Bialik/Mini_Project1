@@ -13,12 +13,13 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using BE;
+using BL;
 namespace UIwpf
 {
     /// <summary>
     /// Interaction logic for UpdateTester.xaml
     /// </summary>
-    public partial class UpdateTester : Page
+    public partial class UpdateTester : UserControl
     {
         List<TextBox> empty;
         public UpdateTester(Tester source)
@@ -133,6 +134,8 @@ namespace UIwpf
             try
             {
                 Tester tester = new Tester(id, fname, lname, Birthdate, gender, phone, addrees, experience, max_tests, max_range, speciality, hours);
+                Ibl help = FactoryBL.GetInstance();
+                help.UpdateTester(tester);
             }
             catch (Exception exc)
             {
@@ -141,18 +144,17 @@ namespace UIwpf
         }
         private void Create_Click_IsEnabled(object sender, RoutedEventArgs e)
         {
-
             if (sender is TextBox)
             {
                 if (((TextBox)sender).Text == "")
                 {
                     Create.IsEnabled = false;
-                    empty.Add((TextBox)sender));
+                    empty.Add((TextBox)sender);
                     return;
                 }
                 else
                 {
-                    empty.Remove((TextBox)sender));
+                    empty.Remove((TextBox)sender);
                 }
 
                 if (empty.Count == 0)

@@ -30,12 +30,12 @@ namespace UIwpf
 
         private void UpdateTester_Click(object sender, RoutedEventArgs e)
         {
-            data.Content = new UpdateTester(tester);
+            
         }
 
         private void Remove_Click(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         private void UpdateTest_Click(object sender, RoutedEventArgs e)

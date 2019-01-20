@@ -18,7 +18,7 @@ namespace UIwpf
     /// <summary>
     /// Interaction logic for AllTesters.xaml
     /// </summary>
-    public partial class AllTesters : Page
+    public partial class AllTesters : UserControl
     {
         public AllTesters()
         {

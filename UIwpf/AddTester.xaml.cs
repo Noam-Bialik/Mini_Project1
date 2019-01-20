@@ -13,12 +13,13 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using BE;
+using BL;
 namespace UIwpf
 {
     /// <summary>
     /// Interaction logic for AddTester.xaml
     /// </summary>
-    public partial class AddTester : Page
+    public partial class AddTester : UserControl
     {
         List<Control> addChildren;
         public AddTester()
@@ -117,6 +118,8 @@ ScheduleTable.Children)
             try
             {
                 Tester tester = new Tester(id, fname, lname, Birthdate, gender, phone, addrees, experience, max_tests, max_range, speciality, hours);
+                Ibl help = FactoryBL.GetInstance();
+                help.AddTester(tester);
             }
             catch (Exception exc)
             {
