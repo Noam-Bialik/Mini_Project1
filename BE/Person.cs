@@ -28,6 +28,7 @@ namespace BE
         public string Phone_number { get => phone_number; set => phone_number = value; }        
         public Address _Address { get => address; set => address = value; }
 
+
         public Person(string id, string first_name, string last_name, DateTime birthdate, Gender Gender, string phone_number, Address address)
         {
             Id = id;
@@ -37,6 +38,10 @@ namespace BE
             _Gender = Gender;
             Phone_number = phone_number;
             _Address = address;
+        }
+        public Person(Person e)
+        {
+            copy(e);
         }
         public void copy(Person c)//copy c to the object unless the id
         {

@@ -1,0 +1,21 @@
+﻿<Page x:Class="UIwpf.AddTester"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:UIwpf"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddTester">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <local:TesterUserControl x:Name="data"  Grid.Row="0"/>
+
+        <Button Name ="Done" Content="Done" Grid.Row="1"  Click="Done_Click" IsEnabled="false"/>
+
+    </Grid>
+</Page>

@@ -132,7 +132,6 @@ C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\AddTrainee.g.cs
 C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\entrance.g.cs
 C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\MainWindow.g.cs
 C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\PersonUserControl.g.cs
-C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\AddTesrer.g.cs
 C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\App.g.cs
 C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\UIwpf_MarkupCompile.cache
@@ -250,9 +249,16 @@ C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\AddTrainee.baml
 C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\entrance.baml
 C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\MainWindow.baml
 C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\PersonUserControl.baml
-C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\AddTesrer.baml
 C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\UIwpf.g.resources
 C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\UIwpf.Properties.Resources.resources
 C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\UIwpf.csproj.GenerateResource.cache
 C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\UIwpf.csproj.CoreCompileInputs.cache
 C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\UIwpf.csproj.CopyComplete
+C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\AddTester.g.cs
+C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\AllTesters.g.cs
+C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\DirectorUserControl.g.cs
+C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\TesterUserControl.g.cs
+C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\AddTester.baml
+C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\AllTesters.baml
+C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\DirectorUserControl.baml
+C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\TesterUserControl.baml

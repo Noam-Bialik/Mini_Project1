@@ -59,10 +59,31 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="AddTesrer.xaml.cs">
-      <DependentUpon>AddTesrer.xaml</DependentUpon>
+    <Compile Include="AddTester.xaml.cs">
+      <DependentUpon>AddTester.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TesterHome.xaml.cs">
+      <DependentUpon>TesterHome.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TesterUserControl.xaml.cs">
+      <DependentUpon>TesterUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateTester.xaml.cs">
+      <DependentUpon>UpdateTester.xaml</DependentUpon>
+    </Compile>
+    <Page Include="AddTester.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AddTrainee.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AllTesters.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DirectorHome.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -77,9 +98,15 @@
     <Compile Include="AddTrainee.xaml.cs">
       <DependentUpon>AddTrainee.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AllTesters.xaml.cs">
+      <DependentUpon>AllTesters.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DirectorHome.xaml.cs">
+      <DependentUpon>DirectorHome.xaml</DependentUpon>
     </Compile>
     <Compile Include="entrance.xaml.cs">
       <DependentUpon>entrance.xaml</DependentUpon>
@@ -92,7 +119,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="AddTesrer.xaml">
+    <Page Include="TesterHome.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TesterUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UpdateTester.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

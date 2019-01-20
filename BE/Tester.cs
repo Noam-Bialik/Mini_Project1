@@ -36,6 +36,10 @@ namespace BE
                 throw;
             }
         }
+        public Tester(Tester e):base(e)
+        {
+            copy(e);
+        }
         public void AddTest(DateTime d)
         {
             schedule.AddTest(d);
