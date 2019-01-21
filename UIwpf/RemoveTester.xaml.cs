@@ -40,6 +40,7 @@ namespace UIwpf
 
                 MessageBox.Show(exc.Message, "logic error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+            //i need to open the entrance user control again
             Visibility = Visibility.Collapsed;
         }
 
