@@ -23,7 +23,7 @@ namespace BL
         void AddTest(Test test); // Add test after cheking. 
         Test GetTest(long id);//return the Test with out removing.
         bool UpdateTest(string tester_id,string trainee_id, int grade, string note);//update the test after the test with the same id return true if succeed.
-
+        bool UpdateTest(long test_id, int grade, string note);
 
         List<Tester> GetTesters(Predicate<Tester> condition = null);// return list of all Testers.
         List<Trainee> GetTrainees(Predicate<Trainee> condition = null);//return list of all Trainees.

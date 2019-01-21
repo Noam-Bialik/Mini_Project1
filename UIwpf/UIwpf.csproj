@@ -65,6 +65,9 @@
     <Compile Include="AllTesters.xaml.cs">
       <DependentUpon>AllTesters.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AllTesterTests.xaml.cs">
+      <DependentUpon>AllTesterTests.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RemoveTester.xaml.cs">
       <DependentUpon>RemoveTester.xaml</DependentUpon>
     </Compile>
@@ -73,6 +76,9 @@
     </Compile>
     <Compile Include="TesterUserControl.xaml.cs">
       <DependentUpon>TesterUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateTestByTester.xaml.cs">
+      <DependentUpon>UpdateTestByTester.xaml</DependentUpon>
     </Compile>
     <Compile Include="UpdateTester.xaml.cs">
       <DependentUpon>UpdateTester.xaml</DependentUpon>
@@ -86,6 +92,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="AllTesters.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AllTesterTests.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -131,6 +141,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TesterUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UpdateTestByTester.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

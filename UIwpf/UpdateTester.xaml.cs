@@ -136,6 +136,7 @@ namespace UIwpf
                 Tester tester = new Tester(id, fname, lname, Birthdate, gender, phone, addrees, experience, max_tests, max_range, speciality, hours);
                 Ibl help = FactoryBL.GetInstance();
                 help.UpdateTester(tester);
+                this.Visibility = Visibility.Collapsed;
             }
             catch (Exception exc)
             {

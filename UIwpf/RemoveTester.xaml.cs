@@ -40,12 +40,12 @@ namespace UIwpf
 
                 MessageBox.Show(exc.Message, "logic error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-
+            Visibility = Visibility.Collapsed;
         }
 
         private void No_Click(object sender, RoutedEventArgs e)
         {
-            //this.
+            Visibility = Visibility.Collapsed;
         }
     }
 }

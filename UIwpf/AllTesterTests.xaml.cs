@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,31 +13,27 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using BE;
+using BL;
 namespace UIwpf
 {
     /// <summary>
-    /// Interaction logic for DirectorUserControl.xaml
+    /// Interaction logic for AllTesterTests.xaml
     /// </summary>
-    public partial class DirectorHome : UserControl
+    public partial class AllTesterTests : UserControl
     {
-        public DirectorHome()
+        Tester tester;
+        ObservableCollection<Test> obs;
+        public AllTesterTests(Tester source)
         {
+            tester = new Tester(source);
             InitializeComponent();
-        }
 
-        private void Testrs_Click(object sender, RoutedEventArgs e)
-        {
-            MainColumn.Content = new AllTesters();    
-        }
+            Ibl help = FactoryBL.GetInstance();
+            obs = new ObservableCollection<Test>(help.GetTests(t => t.Tester_id == tester.Id));
+            AllTesterTest.DataContext = obs;
 
-        private void Trainees_Click(object sender, RoutedEventArgs e)
-        {
 
-        }
-
-        private void Tests_Click(object sender, RoutedEventArgs e)
-        {
 
         }
     }

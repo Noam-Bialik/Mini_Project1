@@ -266,6 +266,22 @@ namespace BL
             }
         }
 
+        public bool UpdateTest(long test_id, int grade, string note)
+        {
+            try
+            {
+                if (grade > 100 || grade <= 0)
+                    throw new Exception("Inapposite grade");
+                if (note == null)
+                    note = "nothing";
+                //check if the tester or the trainee exist 
+                return dal.UpdateTest(test_id, grade, note);
+            }
+            catch
+            {
+                throw;
+            }
+        }
         public bool UpdateTester(Tester e)
         {
             Tester a = GetTesters().Find(t => e.Id == t.Id);

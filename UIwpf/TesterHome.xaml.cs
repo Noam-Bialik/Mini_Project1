@@ -21,7 +21,10 @@ namespace UIwpf
     public partial class TesterHome : UserControl
     {
         Tester tester;
-
+        UpdateTester updateTester;
+        RemoveTester removeTester;
+        UpdateTestByTester updateTest;
+        AllTesterTests allTests;
         public TesterHome(Tester tester)
         {
             InitializeComponent();
@@ -30,22 +33,62 @@ namespace UIwpf
 
         private void UpdateTester_Click(object sender, RoutedEventArgs e)
         {
-            
+            try
+            {
+                removeTester.Visibility = Visibility.Collapsed;
+                updateTest.Visibility = Visibility.Collapsed;
+                allTests.Visibility = Visibility.Collapsed;
+            }
+            catch (Exception)
+            {
+
+            }
+            updateTester = new UpdateTester(tester);
         }
 
         private void Remove_Click(object sender, RoutedEventArgs e)
         {
-            
+            try
+            {
+                updateTest.Visibility = Visibility.Collapsed;
+                updateTester.Visibility = Visibility.Collapsed;
+                allTests.Visibility = Visibility.Collapsed;
+            }
+            catch (Exception)
+            {
+
+            }
+            removeTester = new RemoveTester(tester.Id);
         }
 
         private void UpdateTest_Click(object sender, RoutedEventArgs e)
         {
-            
+            try
+            {
+                removeTester.Visibility = Visibility.Collapsed;
+                updateTester.Visibility = Visibility.Collapsed;
+                allTests.Visibility = Visibility.Collapsed;
+            }
+            catch (Exception)
+            {
+
+            }
+            updateTest = new UpdateTestByTester(tester);
         }
 
         private void AllTests_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                removeTester.Visibility = Visibility.Collapsed;
+                updateTest.Visibility = Visibility.Collapsed;
+                updateTester.Visibility = Visibility.Collapsed;
+            }
+            catch (Exception)
+            {
 
+            }
+            allTests = new AllTesterTests(tester);
         }
     }
 }

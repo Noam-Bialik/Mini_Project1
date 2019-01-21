@@ -17,7 +17,7 @@
             <Button Name="UpdateTest" Content="update test" MinHeight="40" Click="UpdateTest_Click"/>
             <Button Name="AllTests" Content="all my tests" MinHeight="40" Click="AllTests_Click"/>
         </StackPanel>
-        <Grid Grid.Column="1" >
+        <Grid Grid.Column="1" Name="data">
             
         </Grid>
     </Grid>

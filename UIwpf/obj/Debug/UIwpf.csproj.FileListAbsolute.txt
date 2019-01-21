@@ -256,13 +256,15 @@ C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\UIwpf.csproj.CoreCompi
 C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\UIwpf.csproj.CopyComplete
 C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\AddTester.g.cs
 C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\AllTesters.g.cs
-C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\DirectorUserControl.g.cs
 C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\TesterUserControl.g.cs
 C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\AddTester.baml
 C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\AllTesters.baml
-C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\DirectorUserControl.baml
 C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\TesterUserControl.baml
 C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\DirectorHome.g.cs
 C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\RemoveTester.g.cs
 C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\TesterHome.g.cs
 C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\UpdateTester.g.cs
+C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\DirectorHome.baml
+C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\RemoveTester.baml
+C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\TesterHome.baml
+C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\UpdateTester.baml
