@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="UIwpf.AllTests"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:UIwpf"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <DataGrid ItemsSource="{Binding}" IsReadOnly="True" AutoGenerateColumns="False"  >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Test Id" Binding="{Binding Test_id}" />
+                <DataGridTextColumn Header="Trainee Id" Binding="{Binding Trainee_id}" />
+                <DataGridTextColumn Header="Tester Id" Binding="{Binding Tester_id}" />
+                <DataGridTextColumn Header="Time" Binding="{Binding Preferred_treinee_time}" />
+                <DataGridTextColumn Header="Start address" Binding="{Binding Start_address}"/>
+                <DataGridTextColumn Header="Car type" Binding="{Binding Type}" />
+                <DataGridTextColumn Header="Grde" Binding="{Binding Grade}" />
+                <DataGridTextColumn Header="Tester note" Binding="{Binding Note}" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

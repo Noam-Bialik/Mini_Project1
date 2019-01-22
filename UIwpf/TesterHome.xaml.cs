@@ -31,64 +31,68 @@ namespace UIwpf
             this.tester = new Tester(tester);
         }
 
+        public event EventHandler LogOutRequest; 
+
+        private void deleted(object sender, EventArgs e)
+        {
+            LogOutRequest(this, e);
+        }
+
         private void UpdateTester_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                removeTester.Visibility = Visibility.Collapsed;
-                updateTest.Visibility = Visibility.Collapsed;
-                allTests.Visibility = Visibility.Collapsed;
+                data.Children.Clear();
             }
             catch (Exception)
             {
 
             }
             updateTester = new UpdateTester(tester);
+            data.Children.Add(updateTester);
         }
 
         private void Remove_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                updateTest.Visibility = Visibility.Collapsed;
-                updateTester.Visibility = Visibility.Collapsed;
-                allTests.Visibility = Visibility.Collapsed;
+                data.Children.Clear();
             }
             catch (Exception)
             {
 
             }
             removeTester = new RemoveTester(tester.Id);
+            removeTester.the_tester_deleted += deleted;
+            data.Children.Add(removeTester);
         }
 
         private void UpdateTest_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                removeTester.Visibility = Visibility.Collapsed;
-                updateTester.Visibility = Visibility.Collapsed;
-                allTests.Visibility = Visibility.Collapsed;
+                data.Children.Clear();
             }
             catch (Exception)
             {
 
             }
             updateTest = new UpdateTestByTester(tester);
+            data.Children.Add(updateTest);
         }
 
         private void AllTests_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                removeTester.Visibility = Visibility.Collapsed;
-                updateTest.Visibility = Visibility.Collapsed;
-                updateTester.Visibility = Visibility.Collapsed;
+                data.Children.Clear();
             }
             catch (Exception)
             {
 
             }
             allTests = new AllTesterTests(tester);
+            data.Children.Add(allTests);
         }
     }
 }

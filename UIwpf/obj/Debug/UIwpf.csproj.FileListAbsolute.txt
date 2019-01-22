@@ -268,3 +268,11 @@ C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\DirectorHome.baml
 C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\RemoveTester.baml
 C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\TesterHome.baml
 C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\UpdateTester.baml
+C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\AllTesterTests.g.cs
+C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\UpdateTestByTester.g.cs
+C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\AllTests.g.cs
+C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\AllTrainees.g.cs
+C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\AllTesterTests.baml
+C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\UpdateTestByTester.baml
+C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\AllTests.baml
+C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\AllTrainees.baml

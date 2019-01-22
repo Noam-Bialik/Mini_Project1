@@ -26,9 +26,19 @@ namespace UIwpf
         {
             InitializeComponent();
             Ibl help = FactoryBL.GetInstance();
-            DataContext = new ObservableCollection<Tester>(help.GetTesters());
+            data.DataContext = new ObservableCollection<Tester>(help.GetTesters());
         }
 
-        
+        private void Speciality_Click(object sender, RoutedEventArgs e)
+        {
+            Ibl help = FactoryBL.GetInstance();
+            data.DataContext = help.GetTestersBySpeciality(true);
+        }
+
+        private void Location_Click(object sender, RoutedEventArgs e)
+        {
+            Ibl help = FactoryBL.GetInstance();
+            data.DataContext = help.GetTestersByLocation(true);
+        }
     }
 }

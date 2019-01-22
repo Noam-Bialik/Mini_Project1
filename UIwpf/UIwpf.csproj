@@ -68,6 +68,12 @@
     <Compile Include="AllTesterTests.xaml.cs">
       <DependentUpon>AllTesterTests.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AllTests.xaml.cs">
+      <DependentUpon>AllTests.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AllTrainees.xaml.cs">
+      <DependentUpon>AllTrainees.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RemoveTester.xaml.cs">
       <DependentUpon>RemoveTester.xaml</DependentUpon>
     </Compile>
@@ -96,6 +102,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="AllTesterTests.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AllTests.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AllTrainees.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

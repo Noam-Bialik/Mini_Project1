@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <DataGrid Name="AllTesterTest" ItemsSource="{Binding}" IsReadOnly="True" AutoGenerateColumns="False" Margin="0,0,0,10" SelectionChanged="AllTesterTest_SelectionChanged">
+        <DataGrid Name="AllTesterTest" ItemsSource="{Binding}" IsReadOnly="True" AutoGenerateColumns="False" >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Trainee Id" Binding="{Binding Trainee_id}" />
                 <DataGridTextColumn Header="Time" Binding="{Binding Preferred_treinee_time}" Width="100"/>

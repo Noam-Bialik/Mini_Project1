@@ -20,24 +20,36 @@ namespace UIwpf
     /// </summary>
     public partial class DirectorHome : UserControl
     {
+        AllTesters Testers;
+        AllTests Tests;
+        AllTrainees Trainees;
         public DirectorHome()
         {
             InitializeComponent();
         }
 
-        private void Testrs_Click(object sender, RoutedEventArgs e)
+        private void Testers_Click(object sender, RoutedEventArgs e)
         {
-            MainColumn.Content = new AllTesters();    
+            if (Testers == null)
+                Testers = new AllTesters();
+            data.Children.Clear();
+            data.Children.Add(Testers);
         }
 
         private void Trainees_Click(object sender, RoutedEventArgs e)
         {
-
+            if (Trainees == null)
+                Trainees = new AllTrainees();
+            data.Children.Clear();
+            data.Children.Add(Trainees);
         }
 
         private void Tests_Click(object sender, RoutedEventArgs e)
         {
-
+            if (Tests == null)
+                Tests = new AllTests();
+            data.Children.Clear();
+            data.Children.Add(Tests);
         }
     }
 }

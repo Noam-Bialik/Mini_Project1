@@ -11,12 +11,19 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="6*"/>
         </Grid.ColumnDefinitions>
-        <StackPanel  Grid.Column="0">
-            <Button Name="UpdateTester" Content="update personal info" MinHeight="40" Click="UpdateTester_Click"/>
-            <Button Name="Remove" Content="remove tester" MinHeight="40" Click="Remove_Click"/>
-            <Button Name="UpdateTest" Content="update test" MinHeight="40" Click="UpdateTest_Click"/>
-            <Button Name="AllTests" Content="all my tests" MinHeight="40" Click="AllTests_Click"/>
-        </StackPanel>
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Button Name="UpdateTester" Grid.Row="0" Content="update personal info"  Click="UpdateTester_Click"/>
+            <Button Name="Remove" Grid.Row="1" Content="remove tester"  Click="Remove_Click"/>
+            <Button Name="UpdateTest" Grid.Row="2" Content="update test"  Click="UpdateTest_Click"/>
+            <Button Name="AllTests" Grid.Row="3" Content="all my tests"  Click="AllTests_Click"/>
+        </Grid>
+
         <Grid Grid.Column="1" Name="data">
             
         </Grid>

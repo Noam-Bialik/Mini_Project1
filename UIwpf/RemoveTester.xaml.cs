@@ -27,7 +27,7 @@ namespace UIwpf
             InitializeComponent();
             id = tester_id;
         }
-
+        public event EventHandler the_tester_deleted;
         private void Yes_Click(object sender, RoutedEventArgs e)
         {
             Ibl help = FactoryBL.GetInstance();
@@ -40,10 +40,10 @@ namespace UIwpf
 
                 MessageBox.Show(exc.Message, "logic error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-            //i need to open the entrance user control again
             Visibility = Visibility.Collapsed;
+            the_tester_deleted(this, new EventArgs());
         }
-
+        
         private void No_Click(object sender, RoutedEventArgs e)
         {
             Visibility = Visibility.Collapsed;
