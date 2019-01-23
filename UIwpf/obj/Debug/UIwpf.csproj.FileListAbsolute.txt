@@ -428,3 +428,5 @@ C:\Users\Noam Bialik\Source\Repos\Noam-Bialik\Mini_Project1\UIwpf\obj\Debug\UIwp
 C:\Users\Noam Bialik\Source\Repos\Noam-Bialik\Mini_Project1\UIwpf\obj\Debug\UIwpf.pdb
 C:\Users\Noam Bialik\Source\Repos\Noam-Bialik\Mini_Project1\UIwpf\obj\Debug\TraineeUserControl.g.cs
 C:\Users\Noam Bialik\Source\Repos\Noam-Bialik\Mini_Project1\UIwpf\obj\Debug\TraineeUserControl.baml
+C:\Users\Noam Bialik\Source\Repos\Noam-Bialik\Mini_Project1\UIwpf\obj\Debug\UpdateTrainee.g.cs
+C:\Users\Noam Bialik\Source\Repos\Noam-Bialik\Mini_Project1\UIwpf\obj\Debug\UpdateTrainee.baml

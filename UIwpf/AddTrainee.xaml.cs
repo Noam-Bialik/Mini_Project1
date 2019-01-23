@@ -52,11 +52,10 @@ namespace UIwpf
                 Vehicle speciality = (Vehicle)Enum.Parse(typeof(Vehicle), TraineeUC.SpecialityInput.Text);
                 Gearbox gearbox = (Gearbox)Enum.Parse(typeof(Gearbox), TraineeUC.GearboxInput.Text);
                 string sname = TraineeUC.SchoolNameInput.Text;
-                string ftname = TraineeUC.FirstTeacherNameInput.Text;
-                string ltname = TraineeUC.LastTeacherNameInput.Text;
+                string tname = TraineeUC.TeacherNameInput.Text;
                 int numlessons = int.Parse(TraineeUC.LessonsCounterInput.Text);
 
-                Trainee trainee = new Trainee(id, fname, lname, Birthdate, gender, phone, addrees, speciality,gearbox, sname,ltname+ftname, numlessons);
+                Trainee trainee = new Trainee(id, fname, lname, Birthdate, gender, phone, addrees, speciality,gearbox, sname,tname, numlessons);
                 Ibl help = FactoryBL.GetInstance();
                 help.AddTrainee(trainee);
 

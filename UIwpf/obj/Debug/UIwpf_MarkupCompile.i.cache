@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Noam Bialik\Source\Repos\Noam-Bialik\Mini_Project1\UIwpf\App.xaml
-16174857642
+17-1027557528
 
-24-458964945
+25-1031507797
 1231269441276
-AddTester.xaml;AddTrainee.xaml;AllTesters.xaml;AllTesterTests.xaml;AllTests.xaml;AllTrainees.xaml;DirectorHome.xaml;entrance.xaml;MainWindow.xaml;PersonUserControl.xaml;RemoveTester.xaml;TesterHome.xaml;TesterUserControl.xaml;TraineeUserControl.xaml;UpdateTestByTester.xaml;UpdateTester.xaml;
+AddTester.xaml;AddTrainee.xaml;AllTesters.xaml;AllTesterTests.xaml;AllTests.xaml;AllTrainees.xaml;DirectorHome.xaml;entrance.xaml;MainWindow.xaml;PersonUserControl.xaml;RemoveTester.xaml;TesterHome.xaml;TesterUserControl.xaml;TraineeUserControl.xaml;UpdateTestByTester.xaml;UpdateTester.xaml;UpdateTrainee.xaml;
 
-False
+True
 

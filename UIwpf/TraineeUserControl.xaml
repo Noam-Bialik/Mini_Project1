@@ -39,14 +39,7 @@
             <TextBlock Text="School Name" Grid.Row="2" FontSize="15" Foreground="Indigo" FontWeight="Bold"/>
             <TextBox x:Name="SchoolNameInput" Grid.Row="2" Grid.Column="1" Text="school name" />
             <TextBlock Text="Teacher Name" Grid.Row="3" FontSize="15" Foreground="Indigo" FontWeight="Bold"/>
-            <Grid Grid.Row="3" Grid.Column="1">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition />
-                    <ColumnDefinition />
-                </Grid.ColumnDefinitions>
-                <TextBox x:Name="LastTeacherNameInput" Text="last name"/>
-                <TextBox x:Name="FirstTeacherNameInput" Text="first name" Grid.Column="1"/>
-            </Grid>
+            <TextBox x:Name="TeacherNameInput" Text="teacher name" Grid.Column="1" Grid.Row="3"/>
             <TextBlock Text="Lessons Number" Grid.Row="4" FontSize="15" Foreground="Indigo" FontWeight="Bold"/>
             <TextBox Name="LessonsCounterInput" Grid.Row="4" Grid.Column="1" Text="0"/>
         </Grid>
