@@ -7,28 +7,14 @@
              mc:Ignorable="d" 
              d:DesignHeight="1000" d:DesignWidth="1000">
     <Grid>
-        <Grid.Background>
-            <ImageBrush ImageSource="images/background2.jpg" Stretch="UniformToFill"/>
-        </Grid.Background>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition />
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="10*" />
+            <RowDefinition Height="80*" />
+            <RowDefinition Height="15*" />
         </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width ="*"/>
-            <ColumnDefinition />
-            <ColumnDefinition Width ="*"/>
-        </Grid.ColumnDefinitions>
-        <Grid Grid.Row="1" Grid.Column="1" Background="White">
-            <Grid.RowDefinitions>
-
-                <RowDefinition Height="63*"/>
-                <RowDefinition Height="104*"/>
-
-            </Grid.RowDefinitions>
-
-        </Grid>
+        <TextBlock Text="Add Trainee:"/>
+        <local:TraineeUserControl x:Name="TraineeUC" Grid.Row="1"/>
+        <Button x:Name="DoneTrainee" Grid.Row="2" Click="DoneTrainee_Click"/>
 
 
     </Grid>

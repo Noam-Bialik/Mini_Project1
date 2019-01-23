@@ -41,6 +41,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -82,6 +84,9 @@
     </Compile>
     <Compile Include="TesterUserControl.xaml.cs">
       <DependentUpon>TesterUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TraineeUserControl.xaml.cs">
+      <DependentUpon>TraineeUserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="UpdateTestByTester.xaml.cs">
       <DependentUpon>UpdateTestByTester.xaml</DependentUpon>
@@ -155,6 +160,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TesterUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TraineeUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

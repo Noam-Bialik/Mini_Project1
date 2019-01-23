@@ -16,3 +16,9 @@ C:\Users\אביעד\Desktop\Mini_Project1\BE\obj\Debug\BE.csprojAssemblyReferenc
 C:\Users\אביעד\Desktop\Mini_Project1\BE\obj\Debug\BE.csproj.CoreCompileInputs.cache
 C:\Users\אביעד\Desktop\Mini_Project1\BE\obj\Debug\BE.dll
 C:\Users\אביעד\Desktop\Mini_Project1\BE\obj\Debug\BE.pdb
+C:\Users\Noam Bialik\Source\Repos\Noam-Bialik\Mini_Project1\BE\bin\Debug\BE.dll
+C:\Users\Noam Bialik\Source\Repos\Noam-Bialik\Mini_Project1\BE\bin\Debug\BE.pdb
+C:\Users\Noam Bialik\Source\Repos\Noam-Bialik\Mini_Project1\BE\obj\Debug\BE.csprojAssemblyReference.cache
+C:\Users\Noam Bialik\Source\Repos\Noam-Bialik\Mini_Project1\BE\obj\Debug\BE.csproj.CoreCompileInputs.cache
+C:\Users\Noam Bialik\Source\Repos\Noam-Bialik\Mini_Project1\BE\obj\Debug\BE.dll
+C:\Users\Noam Bialik\Source\Repos\Noam-Bialik\Mini_Project1\BE\obj\Debug\BE.pdb

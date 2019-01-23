@@ -20,3 +20,14 @@ C:\Users\אביעד\Desktop\Mini_Project1\DAL\obj\Debug\DAL.csproj.CoreCompileIn
 C:\Users\אביעד\Desktop\Mini_Project1\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\אביעד\Desktop\Mini_Project1\DAL\obj\Debug\DAL.dll
 C:\Users\אביעד\Desktop\Mini_Project1\DAL\obj\Debug\DAL.pdb
+C:\Users\Noam Bialik\Source\Repos\Noam-Bialik\Mini_Project1\DAL\bin\Debug\DAL.dll
+C:\Users\Noam Bialik\Source\Repos\Noam-Bialik\Mini_Project1\DAL\bin\Debug\DAL.pdb
+C:\Users\Noam Bialik\Source\Repos\Noam-Bialik\Mini_Project1\DAL\bin\Debug\BE.dll
+C:\Users\Noam Bialik\Source\Repos\Noam-Bialik\Mini_Project1\DAL\bin\Debug\DS.dll
+C:\Users\Noam Bialik\Source\Repos\Noam-Bialik\Mini_Project1\DAL\bin\Debug\BE.pdb
+C:\Users\Noam Bialik\Source\Repos\Noam-Bialik\Mini_Project1\DAL\bin\Debug\DS.pdb
+C:\Users\Noam Bialik\Source\Repos\Noam-Bialik\Mini_Project1\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\Noam Bialik\Source\Repos\Noam-Bialik\Mini_Project1\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Noam Bialik\Source\Repos\Noam-Bialik\Mini_Project1\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\Noam Bialik\Source\Repos\Noam-Bialik\Mini_Project1\DAL\obj\Debug\DAL.dll
+C:\Users\Noam Bialik\Source\Repos\Noam-Bialik\Mini_Project1\DAL\obj\Debug\DAL.pdb

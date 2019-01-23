@@ -16,3 +16,12 @@ C:\Users\אביעד\Desktop\Mini_Project1\DS\obj\Debug\DS.csproj.CoreCompileInpu
 C:\Users\אביעד\Desktop\Mini_Project1\DS\obj\Debug\DS.csproj.CopyComplete
 C:\Users\אביעד\Desktop\Mini_Project1\DS\obj\Debug\DS.dll
 C:\Users\אביעד\Desktop\Mini_Project1\DS\obj\Debug\DS.pdb
+C:\Users\Noam Bialik\Source\Repos\Noam-Bialik\Mini_Project1\DS\bin\Debug\DS.dll
+C:\Users\Noam Bialik\Source\Repos\Noam-Bialik\Mini_Project1\DS\bin\Debug\DS.pdb
+C:\Users\Noam Bialik\Source\Repos\Noam-Bialik\Mini_Project1\DS\bin\Debug\BE.dll
+C:\Users\Noam Bialik\Source\Repos\Noam-Bialik\Mini_Project1\DS\bin\Debug\BE.pdb
+C:\Users\Noam Bialik\Source\Repos\Noam-Bialik\Mini_Project1\DS\obj\Debug\DS.csprojAssemblyReference.cache
+C:\Users\Noam Bialik\Source\Repos\Noam-Bialik\Mini_Project1\DS\obj\Debug\DS.csproj.CoreCompileInputs.cache
+C:\Users\Noam Bialik\Source\Repos\Noam-Bialik\Mini_Project1\DS\obj\Debug\DS.csproj.CopyComplete
+C:\Users\Noam Bialik\Source\Repos\Noam-Bialik\Mini_Project1\DS\obj\Debug\DS.dll
+C:\Users\Noam Bialik\Source\Repos\Noam-Bialik\Mini_Project1\DS\obj\Debug\DS.pdb
