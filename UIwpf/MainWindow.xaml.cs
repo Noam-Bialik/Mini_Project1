@@ -18,26 +18,44 @@ using BL;
 
 namespace UIwpf
 {
+    
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
+        AddTester addTester;
+        AddTrainee addTrainee;
+        entrance ent = new entrance();
+        
         public MainWindow()
         {
             InitializeComponent();
-
-            
+            ent.AddTesterB.Click += AddTesterB_Click;
+            ent.AddTraineeB.Click += AddTraineeB_Click;
+            Program.Children.Add(ent);
         }
 
-        private void Entrance_Loaded(object sender, RoutedEventArgs e)
+        private void AddTraineeB_Click(object sender, RoutedEventArgs e)
         {
-
+            if (addTrainee == null)
+                addTrainee = new AddTrainee();
+            Program.Children.Clear();
+            Program.Children.Add(addTrainee);
         }
 
-        private void UserControl1_Loaded(object sender, RoutedEventArgs e)
+        private void AddTesterB_Click(object sender, RoutedEventArgs e)
         {
+            if (addTester == null)
+                addTester = new AddTester();
+            Program.Children.Clear();
+            Program.Children.Add(addTester);
+        }
 
+        private void Logout_Click(object sender, RoutedEventArgs e)
+        {
+            Program.Children.Clear();
+            Program.Children.Add(ent);
         }
     }
 }

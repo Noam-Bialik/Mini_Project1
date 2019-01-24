@@ -20,9 +20,12 @@ namespace UIwpf
     /// </summary>
     public partial class entrance : UserControl
     {
+       
         public entrance()
         {
             InitializeComponent();
         }
+       
+    
     }
 }

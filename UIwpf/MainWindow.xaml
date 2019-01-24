@@ -6,11 +6,25 @@
         xmlns:local="clr-namespace:UIwpf"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid Name="Main">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="100*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100*"/>
+                <ColumnDefinition Width="25*"/>
+            </Grid.ColumnDefinitions>
+            <Button Content="log out" x:Name="logout" Click="Logout_Click" Grid.Column="1"/>
+        </Grid>
+        <Grid Name="Program" Grid.Row="1">
 
-        <local:AddTrainee/>
-       
-        
+        </Grid>
+
+
+
+
 
     </Grid>
 </Window>
