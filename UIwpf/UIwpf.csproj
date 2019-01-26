@@ -67,6 +67,9 @@
     <Compile Include="AllTesters.xaml.cs">
       <DependentUpon>AllTesters.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AllTestersInRadius.xaml.cs">
+      <DependentUpon>AllTestersInRadius.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AllTesterTests.xaml.cs">
       <DependentUpon>AllTesterTests.xaml</DependentUpon>
     </Compile>
@@ -76,14 +79,23 @@
     <Compile Include="AllTrainees.xaml.cs">
       <DependentUpon>AllTrainees.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AllTraineeTests.xaml.cs">
+      <DependentUpon>AllTraineeTests.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RemoveTester.xaml.cs">
       <DependentUpon>RemoveTester.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveTrainee.xaml.cs">
+      <DependentUpon>RemoveTrainee.xaml</DependentUpon>
     </Compile>
     <Compile Include="TesterHome.xaml.cs">
       <DependentUpon>TesterHome.xaml</DependentUpon>
     </Compile>
     <Compile Include="TesterUserControl.xaml.cs">
       <DependentUpon>TesterUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TraineeHome.xaml.cs">
+      <DependentUpon>TraineeHome.xaml</DependentUpon>
     </Compile>
     <Compile Include="TraineeUserControl.xaml.cs">
       <DependentUpon>TraineeUserControl.xaml</DependentUpon>
@@ -109,6 +121,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="AllTestersInRadius.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AllTesterTests.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -118,6 +134,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="AllTrainees.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AllTraineeTests.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -158,11 +178,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="RemoveTrainee.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="TesterHome.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TesterUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TraineeHome.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

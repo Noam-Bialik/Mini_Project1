@@ -21,7 +21,7 @@
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
             <TextBlock Text="ID" FontSize="15" Foreground="Indigo" FontWeight="Bold"  />
-            <TextBox Name="IdInput" Text="nnnnnnnnn" MaxLength="9" Grid.Column="1" />
+            <TextBox Name="IdInput" Text="your id" MaxLength="9" Grid.Column="1" />
         </Grid>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>

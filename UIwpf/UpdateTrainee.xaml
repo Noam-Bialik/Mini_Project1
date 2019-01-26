@@ -10,10 +10,10 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="10*"/>
             <RowDefinition Height="150*"/>
-            <RowDefinition Height="15"/>
+            <RowDefinition Height="15*"/>
         </Grid.RowDefinitions>
         <TextBlock Text="Update Trainee:."/>
         <local:TraineeUserControl x:Name="TraineeUC" Grid.Row="1"/>
-        <Button Name="DoneUpdate" Content="update" Grid.Row="2" Click="DoneUpdate_Click"/>
+        <Button Name="DoneUpdate" Content="update" Grid.Row="2" IsEnabled="False" Click="DoneUpdate_Click"/>
     </Grid>
 </UserControl>

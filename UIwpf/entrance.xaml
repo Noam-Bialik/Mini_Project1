@@ -28,8 +28,8 @@
                     <ColumnDefinition Width="153*"/>
                     <ColumnDefinition Width="197*"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock Grid.Column="0" Text=" your ID :" FontSize="20" FontStyle="Italic"  Foreground="Indigo" />
-                <TextBox Grid.Column="1" MaxLength="9" Text="000000000" FontSize=" 20" HorizontalAlignment="Left" Width="181"  />
+                <TextBlock Grid.Column="0" Text=" your ID :" FontSize="20" FontStyle="Italic"  Foreground="Indigo" HorizontalAlignment="Right" />
+                <TextBox x:Name="EnteredId"  Grid.Column="1" MaxLength="9" FontSize=" 20" HorizontalAlignment="Left" Width="181" />
             </Grid>
             <Grid Grid.Row="3" Grid.ColumnSpan="2">
                 <Grid.RowDefinitions>
@@ -37,11 +37,11 @@
                     <RowDefinition Height="1*"/>
                 </Grid.RowDefinitions>
 
-                <TextBlock  Grid.Row="0"   Text="want to add your self to the system ?" Foreground="Indigo" Margin="83,0,0,0" />
-                <TextBlock  Grid.Row="1"  Text="press acording to your situation" Foreground="Indigo" Margin="95,0,0,0"/>
+                <TextBlock  Grid.Row="0"   Text="want to add your self to the system ?" Foreground="Indigo" HorizontalAlignment="Center" />
+                <TextBlock  Grid.Row="1"  Text="press acording to your situation" Foreground="Indigo" HorizontalAlignment="Center" />
             </Grid>
-            <Button x:Name="AddTraineeB" Content="trainee" Grid.Row="4" Grid.Column="0"  Background="LightYellow" Margin="60,0,0,100" />
-            <Button x:Name="AddTesterB" Content="tester" Grid.Row="4" Grid.Column="1" Background="LightYellow" Margin="0,0,60,100"  />
+            <Button x:Name="AddTraineeB" Content="trainee" Grid.Row="4" Grid.Column="0"  Background="LightYellow" Margin="60,0,0,80" />
+            <Button x:Name="AddTesterB" Content="tester" Grid.Row="4" Grid.Column="1" Background="LightYellow" Margin="0,0,60,80"  />
         </Grid>
     </Grid>
 

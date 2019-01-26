@@ -25,7 +25,6 @@ namespace UIwpf
         {
             InitializeComponent();
         }
-       
-    
+
     }
 }

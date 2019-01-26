@@ -35,7 +35,8 @@ namespace UIwpf
 
         private void deleted(object sender, EventArgs e)
         {
-            LogOutRequest(this, e);
+            object j = new object();
+            LogOutRequest(j, new EventArgs());
         }
 
         private void UpdateTester_Click(object sender, RoutedEventArgs e)

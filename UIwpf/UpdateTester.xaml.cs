@@ -26,6 +26,21 @@ namespace UIwpf
         {
             InitializeComponent();
 
+            //copy the values from the source
+            data.PersonAttribute.IdInput.Text = source.Id;
+            data.PersonAttribute.IdInput.IsEnabled = false;
+            data.PersonAttribute.LastNameInput.Text = source.Last_name;
+            data.PersonAttribute.FirstNameInput.Text = source.First_name;
+            data.PersonAttribute.GenderInput.SelectedIndex = (int)source._Gender;
+            data.PersonAttribute.BirthdateInput.SelectedDate = source.Birthdate;
+            data.PersonAttribute.PhoneNumberInput.Text = source.Phone_number;
+            data.PersonAttribute.CityInput.Text = source._Address.City;
+            data.PersonAttribute.StreetInput.Text = source._Address.Street;
+            data.PersonAttribute.HouseNumberInput.Text = source._Address.Building_number.ToString();
+            data.ExperienceInput.Text = source.Experience.ToString();
+            data.MaxRangeInput.Text = source.Max_range.ToString();
+            data.MaxTestInput.Text = source.Max_tests_per_week.ToString();
+            data.SpecialityInput.SelectedIndex = (int)(source.Speciality);
             //add the Create_Click_IsEnabled func to all the field's events and initialize the list
             empty = new List<TextBox>();
             data.PersonAttribute.IdInput.TextChanged += Create_Click_IsEnabled;
@@ -43,21 +58,6 @@ namespace UIwpf
             data.SpecialityInput.SelectionChanged += Create_Click_IsEnabled;
 
 
-            //copy the values from the source
-            data.PersonAttribute.IdInput.Text = source.Id;
-            data.PersonAttribute.IdInput.IsEnabled = false;
-            data.PersonAttribute.LastNameInput.Text = source.Last_name;
-            data.PersonAttribute.FirstNameInput.Text = source.First_name;
-            //data.PersonAttribute.GenderInput;
-            data.PersonAttribute.BirthdateInput.SelectedDate = source.Birthdate;
-            data.PersonAttribute.PhoneNumberInput.Text = source.Phone_number;
-            data.PersonAttribute.CityInput.Text = source._Address.City;
-            data.PersonAttribute.StreetInput.Text = source._Address.Street;
-            data.PersonAttribute.HouseNumberInput.Text = source._Address.Building_number.ToString();
-            data.ExperienceInput.Text = source.Experience.ToString();
-            data.MaxRangeInput.Text = source.Max_range.ToString();
-            data.MaxTestInput.Text = source.Max_tests_per_week.ToString();
-            //data.SpecialityInput;
         }
 
         private void Create_Click(object sender, RoutedEventArgs e)
@@ -102,10 +102,10 @@ namespace UIwpf
                 data.MaxTestInput.Text = "0";
                 return;
             }
-            int max_range;
+            float max_range;
             try
             {
-                max_range = int.Parse(data.MaxRangeInput.Text);
+                max_range = float.Parse(data.MaxRangeInput.Text);
             }
             catch (Exception)
             {
@@ -135,7 +135,11 @@ namespace UIwpf
             {
                 Tester tester = new Tester(id, fname, lname, Birthdate, gender, phone, addrees, experience, max_tests, max_range, speciality, hours);
                 Ibl help = FactoryBL.GetInstance();
-                help.UpdateTester(tester);
+                bool success= help.UpdateTester(tester);
+                if (success)
+                    MessageBox.Show("the tester update successfuly");
+                else
+                    MessageBox.Show("something went wrong");
                 this.Visibility = Visibility.Collapsed;
             }
             catch (Exception exc)
@@ -158,9 +162,9 @@ namespace UIwpf
                     empty.Remove((TextBox)sender);
                 }
 
+            }
                 if (empty.Count == 0)
                     Create.IsEnabled = true;
-            }
 
         }
     }

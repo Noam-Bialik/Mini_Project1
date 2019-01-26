@@ -13,7 +13,7 @@
         </Grid.RowDefinitions>
         <local:TesterUserControl x:Name="data"  Grid.Row="0"/>
 
-        <Button Name ="Create" Content="Create" Grid.Row="1"  Click="Create_Click" IsEnabled="false"/>
+        <Button Name ="Create" Content="Change" Grid.Row="1"  Click="Create_Click" IsEnabled="false"/>
 
     </Grid>
 </UserControl>

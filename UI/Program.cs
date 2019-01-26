@@ -392,7 +392,7 @@ namespace SimpleUI
                                 Trainee a;
                                 DateTime h = new DateTime(2000, 03, 01);
                                 Address j = new Address("grizim", 2, "kedumim");
-                                a = new Trainee("323447747", "shmuel", "garber", h, Gender.Female, "0525067534", j, Vehicle.HeavyTruck, Gearbox.Automaton, "lev", "desht", 60);
+                                a = new Trainee("324183532", "shmuel", "garber", h, Gender.Female, "0525067534", j, Vehicle.HeavyTruck, Gearbox.Automaton, "lev", "desht", 60);
                                 bl.AddTrainee(a);
                                 h = new DateTime(1995, 03, 20);
                                 j = new Address("grizim", 2, "kedumim");
@@ -421,7 +421,7 @@ namespace SimpleUI
                                 h = new DateTime(1956, 01, 01);
                                 j = new Address("leumi", 92, "Tel aviv");
                                 Tester b = new Tester("325469525", "moshe", "klein", h, Gender.Female, "0565854444", j, 10, 10, 30, Vehicle.Private, k);
-
+                                bl.AddTester(b);
                             }
                             catch (Exception)
                             {

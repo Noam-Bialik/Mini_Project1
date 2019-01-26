@@ -31,6 +31,19 @@ namespace BE
             }
         }
 
+        public Trainee(string id, string first_name, string last_name, DateTime birthdate, Gender Gender, string phone_number, Address address, Vehicle speciality, Gearbox gearbox, string school_name, string teacher_name, int lessons_count) : base(id, first_name, last_name, birthdate, Gender, phone_number, address)
+        {
+            _Speciality = speciality;
+            _Gearbox = gearbox;
+            School_name = school_name;
+            Teacher_name = teacher_name;
+            Lessons_count = lessons_count;
+        }
+        public Trainee(Trainee source):base(source)
+        {
+            copy(source);
+        }
+
         public void copy(Trainee c)//copy c to the object unless the id
         {
             //copy all the person's attributes
@@ -40,14 +53,6 @@ namespace BE
             School_name = c.School_name;
             Teacher_name = c.Teacher_name;
             Lessons_count = c.Lessons_count;
-        }
-        public Trainee(string id, string first_name, string last_name, DateTime birthdate, Gender Gender, string phone_number, Address address, Vehicle speciality, Gearbox gearbox, string school_name, string teacher_name, int lessons_count) : base(id, first_name, last_name, birthdate, Gender, phone_number, address)
-        {
-            _Speciality = speciality;
-            _Gearbox = gearbox;
-            School_name = school_name;
-            Teacher_name = teacher_name;
-            Lessons_count = lessons_count;
         }
         public override string ToString()
         {

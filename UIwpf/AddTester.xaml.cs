@@ -51,6 +51,36 @@ namespace UIwpf
             Gender gender = (Gender)Enum.Parse(typeof(Gender), data.PersonAttribute.GenderInput.Text);
             DateTime Birthdate = data.PersonAttribute.BirthdateInput.SelectedDate.Value;
             string phone = data.PersonAttribute.PhoneNumberInput.Text;
+            for(int i =0;i<lname.Length;i++)
+            {
+                if(lname[i] == ' ')
+                {
+                    lname = "last name";
+                    data.PersonAttribute.LastNameInput.Text = lname;
+                    MessageBox.Show("the last name must not contain  space", "Name error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+            }
+            for (int i = 0; i < fname.Length; i++)
+            {
+                if (fname[i] == ' ')
+                {
+                    fname = "first name";
+                    data.PersonAttribute.FirstNameInput.Text = fname;
+                    MessageBox.Show("the first name must not contain  space", "Name error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+            }
+            try
+            {
+                int.Parse(id);
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("the ID must contain only digits", "ID error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
             int house_number;
             try
             {
@@ -101,8 +131,7 @@ namespace UIwpf
             for (int i = 0; i < 5; i++)
                 hours[i] = new bool[6];
             //Initialize hours array
-            foreach (var item in data.
-ScheduleTable.Children)
+            foreach (var item in data.ScheduleTable.Children)
             {
                 if (item is CheckBox)
                 {

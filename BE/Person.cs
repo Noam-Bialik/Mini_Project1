@@ -13,7 +13,37 @@ namespace BE
         private string phone_number;
         private Address address;
 
-        public string Id { get => id; set => id = value; }
+        public string Id
+        {
+            get => id;
+            set
+            {
+                /*if (value.Length == 9)
+                    throw new Exception("the id must be 9 digits");
+                try
+                {
+                    int.Parse(value);
+                }
+                catch (Exception)
+                {
+                    throw new Exception("the id must contain only digits");
+                }
+                int sum = 0;
+                int counter = 1;
+                foreach (var item in value)
+                {
+                    sum += (item - '0') * counter;
+                    if (counter == 1)
+                        counter = 2;
+                    if (counter == 2)
+                        counter = 1;
+                }
+                if (sum % 10 != 0)
+                    throw new Exception("the id wrong");*/
+                //correct id
+                id = value;
+            }
+        }
         public string First_name { get => first_name; set => first_name = value; }
         public string Last_name { get => last_name; set => last_name = value; }
         public DateTime Birthdate
@@ -41,6 +71,7 @@ namespace BE
         }
         public Person(Person e)
         {
+            Id = e.Id;
             copy(e);
         }
         public void copy(Person c)//copy c to the object unless the id
