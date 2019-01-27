@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using BE;
 using DAL;
 using System.Linq;
+using System.Net;
+using System.Xml;
+using System.IO;
+
 namespace BL
 {
 
@@ -14,10 +18,46 @@ namespace BL
         {
             dal = FactoryDal.GetInstance();
         }
-        private int distance(Address a, Address b)//distance in km
+        private double distance(Address a, Address b)//distance in km
         {
-            return 1;
-        } 
+            return CalcDistance(a.City,a.Street,a.Building_number,b.City,b.Street,b.Building_number);
+        }
+        public static double CalcDistance(string city1, string street1, int num1, string city2, string street2, int num2)
+        {
+            string firstAddress = street1 + " " + num1 + " st. " + city1 + " ci. Israel";
+            string secondAddresss = street2 + " " + num2 + " st. " + city2 + " ci. Israel";
+            string KEY = @"SCQY2qj4j3aaF5jfdfTHydqPIGvh1MFt";
+            string url = @"https://www.mapquestapi.com/directions/v2/route" +
+             @"?key=" + KEY +
+             @"&from=" + firstAddress +
+             @"&to=" + secondAddresss +
+             @"&outFormat=xml" +
+             @"&ambiguities=ignore&routeType=fastest&doReverseGeocode=false" +
+             @"&enhancedNarrative=false&avoidTimedConditions=false";
+            //request from MapQuest service the distance between the 2 addresses
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+            WebResponse response = request.GetResponse();
+            Stream dataStream = response.GetResponseStream();
+            StreamReader sreader = new StreamReader(dataStream);
+            string responsereader = sreader.ReadToEnd();
+            response.Close();
+            //the response is given in an XML format
+            XmlDocument xmldoc = new XmlDocument();
+            xmldoc.LoadXml(responsereader);
+            if (xmldoc.GetElementsByTagName("statusCode")[0].ChildNodes[0].InnerText == "0")
+            //we have the expected answer
+            {
+                //display the returned distance
+                XmlNodeList distance = xmldoc.GetElementsByTagName("distance");
+                double distInMiles = Convert.ToDouble(distance[0].ChildNodes[0].InnerText);
+                return (distInMiles * 1.609344);
+            }
+            else/* if (xmldoc.GetElementsByTagName("statusCode")[0].ChildNodes[0].InnerText == "402")*/
+            //we have an answer that an error occurred, one of the addresses is not found busy network or other error...
+            {
+                return 5;
+            }
+        }
 
         public void AddTest(Test test)
         {
