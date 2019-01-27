@@ -14,7 +14,7 @@
         </Grid.RowDefinitions>
         <TextBlock Text="Add Trainee:"/>
         <local:TraineeUserControl x:Name="TraineeUC" Grid.Row="1"/>
-        <Button x:Name="DoneTrainee" Grid.Row="2" Click="DoneTrainee_Click"/>
+        <Button x:Name="Done" Content="Done" Grid.Row="2" IsEnabled="False" Click="DoneTrainee_Click"/>
 
 
     </Grid>

@@ -10,11 +10,11 @@ none
 false
 TRACE
 C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\App.xaml
-5-1296098727
+21-145029048
 
-92132603961
-121-799522349
-AddTrainee.xaml;entrance.xaml;MainWindow.xaml;PersonUserControl.xaml;AddTesrer.xaml;
+2541547031
+123-384794737
+AddTester.xaml;AddTrainee.xaml;AllTesters.xaml;AllTestersInRadius.xaml;AllTesterTests.xaml;AllTests.xaml;AllTrainees.xaml;AllTraineeTests.xaml;DirectorHome.xaml;entrance.xaml;MainWindow.xaml;PersonUserControl.xaml;RemoveTester.xaml;RemoveTrainee.xaml;TesterHome.xaml;TesterUserControl.xaml;TraineeHome.xaml;TraineeUserControl.xaml;UpdateTestByTester.xaml;UpdateTester.xaml;UpdateTrainee.xaml;
 
 True
 

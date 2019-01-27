@@ -438,3 +438,15 @@ C:\Users\Noam Bialik\Source\Repos\Noam-Bialik\Mini_Project1\UIwpf\obj\Debug\AllT
 C:\Users\Noam Bialik\Source\Repos\Noam-Bialik\Mini_Project1\UIwpf\obj\Debug\AllTraineeTests.g.cs
 C:\Users\Noam Bialik\Source\Repos\Noam-Bialik\Mini_Project1\UIwpf\obj\Debug\AllTestersInRadius.baml
 C:\Users\Noam Bialik\Source\Repos\Noam-Bialik\Mini_Project1\UIwpf\obj\Debug\AllTraineeTests.baml
+C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\AllTestersInRadius.g.cs
+C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\AllTraineeTests.g.cs
+C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\RemoveTrainee.g.cs
+C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\TraineeHome.g.cs
+C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\TraineeUserControl.g.cs
+C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\UpdateTrainee.g.cs
+C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\AllTestersInRadius.baml
+C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\AllTraineeTests.baml
+C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\RemoveTrainee.baml
+C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\TraineeHome.baml
+C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\TraineeUserControl.baml
+C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Debug\UpdateTrainee.baml

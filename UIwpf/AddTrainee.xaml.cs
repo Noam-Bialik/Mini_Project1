@@ -22,9 +22,26 @@ namespace UIwpf
     /// </summary>
     public partial class AddTrainee : UserControl
     {
+        List<Control> addChildren;
         public AddTrainee()
         {
             InitializeComponent();
+            //add the Done_IsEnabled func to all the field's events and initialize the list
+            addChildren = new List<Control>();
+            TraineeUC.person.IdInput.TextChanged += Done_IsEnabled;
+            TraineeUC.person.LastNameInput.TextChanged += Done_IsEnabled;
+            TraineeUC.person.FirstNameInput.TextChanged += Done_IsEnabled;
+            TraineeUC.person.GenderInput.SelectionChanged += Done_IsEnabled;
+            TraineeUC.person.BirthdateInput.SelectedDateChanged += Done_IsEnabled;
+            TraineeUC.person.PhoneNumberInput.TextChanged += Done_IsEnabled;
+            TraineeUC.person.CityInput.TextChanged += Done_IsEnabled;
+            TraineeUC.person.StreetInput.TextChanged += Done_IsEnabled;
+            TraineeUC.person.HouseNumberInput.TextChanged += Done_IsEnabled;
+            TraineeUC.SpecialityInput.SelectionChanged += Done_IsEnabled;
+            TraineeUC.GearboxInput.SelectionChanged += Done_IsEnabled;
+            TraineeUC.SchoolNameInput.TextChanged += Done_IsEnabled;
+            TraineeUC.TeacherNameInput.TextChanged += Done_IsEnabled;
+            TraineeUC.LessonsCounterInput.TextChanged += Done_IsEnabled;
         }
 
         private void DoneTrainee_Click(object sender, RoutedEventArgs e)
@@ -53,16 +70,58 @@ namespace UIwpf
                 Gearbox gearbox = (Gearbox)Enum.Parse(typeof(Gearbox), TraineeUC.GearboxInput.Text);
                 string sname = TraineeUC.SchoolNameInput.Text;
                 string tname = TraineeUC.TeacherNameInput.Text;
-                int numlessons = int.Parse(TraineeUC.LessonsCounterInput.Text);
+                int numlessons;
+                try
+                {
+                    numlessons = int.Parse(TraineeUC.LessonsCounterInput.Text);
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("the number lessons must contain only digits", "numer lessons error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    TraineeUC.person.HouseNumberInput.Text = "number";
+                    return;
+                }
+                try
+                {
 
-                Trainee trainee = new Trainee(id, fname, lname, Birthdate, gender, phone, addrees, speciality,gearbox, sname,tname, numlessons);
+                Trainee trainee = new Trainee(id, fname, lname, Birthdate, gender, phone, addrees, speciality, gearbox, sname, tname, numlessons);
                 Ibl help = FactoryBL.GetInstance();
                 help.AddTrainee(trainee);
 
+                }
+                catch (Exception exc)
+                {
+
+                    MessageBox.Show(exc.Message, "logic error", MessageBoxButton.OK);
+                }
+
             }
-            catch
+            catch (Exception exc)
             {
-                MessageBox.Show("LA    LA");
+
+                MessageBox.Show(exc.Message, "logic error", MessageBoxButton.OK);
+            }
+        }
+
+        private void Done_IsEnabled(object sender, RoutedEventArgs e)
+        {
+
+            if (sender is TextBox)
+            {
+                if (sender is TextBox)
+                {
+                    if (((TextBox)sender).Text == "")
+                    {
+                        addChildren.Remove((Control)sender);
+                        Done.IsEnabled = false;
+                        return;
+                    }
+                }
+                if (addChildren.Contains(sender))
+                    return;
+                addChildren.Add((Control)sender);
+                if (addChildren.Count == 14)
+                    Done.IsEnabled = true;
             }
         }
     }

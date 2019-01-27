@@ -65,18 +65,26 @@ namespace BL
             {
                 throw new Exception("missing details");
             }
+            //check the hours
+            DayOfWeek day = test.Preferred_treinee_time.DayOfWeek;
+            int hour = test.Preferred_treinee_time.Hour;
+            if ((int)day < 0 || (int)day > 4)
+                throw new Exception("the day must be between sunday to thursday");
+            hour -= 9;
+            if (hour < 0 || hour > 5)
+                throw new Exception("the hour must be between 9:00 to 14:00");
             string id = test.Trainee_id;
             //find the diffrence between the last test and the preferred treinee time
-            var a = from t in GetTests(t=>t.Trainee_id == id)
+            var a = from t in GetTests(t => t.Trainee_id == id)
                     select t.Preferred_treinee_time;
-            if(a.Count()!=0)
+            if (a.Count() != 0)
             {
-            DateTime last = a.Max();
-            TimeSpan diffrence = test.Preferred_treinee_time - last;
-            if (last >= DateTime.Now)
-                throw new Exception("alredy have a test");
-            if (diffrence.Days <= 30)
-                throw new Exception("the interval time between the test must be at least 30 days");
+                DateTime last = a.Max();
+                TimeSpan diffrence = test.Preferred_treinee_time - last;
+                if (last >= DateTime.Now)
+                    throw new Exception("alredy have a test");
+                if (diffrence.Days <= 30)
+                    throw new Exception("the interval time between the test must be at least 30 days");
             }
             //info adding
 
@@ -85,15 +93,18 @@ namespace BL
             if (optionalTestersDistance.Count == 0)
                 throw new Exception("there isn't tester in this area");
             //create list of al the available testers
-            var available = from t in optionalTestersTime
-                            from d in optionalTestersDistance
-                            where t.Id == d.Id
-                            select t;
+            var available = (from t in optionalTestersTime
+                             from d in optionalTestersDistance
+                             where t.Id == d.Id
+                             select t).ToList();
+            if (available == null || available.Count() == 0)
+                throw new Exception("there isn't tester in this place and time");
+
             //remove all the testers which have to many test
-            available = from av in available
-                        where av._Schedule.TestsInWeek(test.Preferred_treinee_time) < av.Max_tests_per_week
-                        select av;
-            if (available.Count() == 0)
+            available = (from av in available
+                         where av._Schedule.TestsInWeek(test.Preferred_treinee_time) < av.Max_tests_per_week
+                         select av).ToList();
+            if (available == null || available.Count() == 0)
                 throw new Exception("there isn't tester in this time");
 
 
@@ -109,6 +120,7 @@ namespace BL
                 throw;
             }
         }
+
 
         public void AddTester(Tester tester)
         {

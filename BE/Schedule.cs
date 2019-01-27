@@ -37,10 +37,10 @@ namespace BE
             }
             public void AddTest(int day, int hour)
             {
-                if (day < 0 && day > 4)
+                if (day < 0 || day > 4)
                     throw new Exception("the day must be between sunday to thursday");
                 hour -= 9;
-                if (hour < 0 && hour > 5)
+                if (hour < 0 || hour > 5)
                     throw new Exception("the hour must be between 9:00 to 14:00");
                 if (schedule[day][hour])
                     throw new Exception("there is already test in this hour");
@@ -49,10 +49,10 @@ namespace BE
             }
             public void RemoveTest(int day, int hour)
             {
-                if (day < 0 && day > 4)
+                if (day < 0 || day > 4)
                     throw new Exception("this test dont exist");
                 hour -= 9;
-                if (hour < 0 && hour > 5)
+                if (hour < 0 || hour > 5)
                     throw new Exception("this test dont exist");
                 if (!schedule[day][hour])
                     throw new Exception("this test dont exist");
@@ -129,19 +129,19 @@ namespace BE
         //funcs
         public void AddHourToSchedule(DayOfWeek day, int hour)
         {
-            if ((int)day < 0 && (int)day > 4)
+            if ((int)day < 0 || (int)day > 4)
                 throw new Exception("the day must be between sunday to thursday");
             hour -= 9;
-            if (hour < 0 && hour > 5)
+            if (hour < 0 || hour > 5)
                 throw new Exception("the hour must be between 9:00 to 14:00");
             schedule[(int)day][hour] = true;
         }
         public void RemoveHourFromSchedule(DayOfWeek day, int hour)
         {
-            if ((int)day < 0 && (int)day > 4)
+            if ((int)day < 0 || (int)day > 4)
                 throw new Exception("the day must be between sunday to thursday");
             hour -= 9;
-            if (hour < 0 && hour > 5)
+            if (hour < 0 || hour > 5)
                 throw new Exception("the hour must be between 9:00 to 14:00");
             schedule[(int)day][hour] = false;
         }
@@ -149,17 +149,17 @@ namespace BE
         {
             DayOfWeek day = d.DayOfWeek;
             int hour = d.Hour;
-            if ((int)day < 0 && (int)day > 4)
+            if ((int)day < 0 || (int)day > 4)
                 throw new Exception("the day must be between sunday to thursday");
             hour -= 9;
-            if (hour < 0 && hour > 5)
+            if (hour < 0 || hour > 5)
                 throw new Exception("the hour must be between 9:00 to 14:00");
             if (schedule[(int)day][hour] == false)
                 throw new Exception("the tester dont work in this hours");
             //search if the schedule to this week already exist or create him
             week current = weeks.Find(w => week.first_day_of_week(d) == w.First_Day);
 
-            if (current== null)
+            if (current == null)
             {
                 current = new week(schedule, d);
             }
@@ -179,10 +179,10 @@ namespace BE
         {
             DayOfWeek day = d.DayOfWeek;
             int hour = d.Hour;
-            if ((int)day < 0 && (int)day > 4)
+            if ((int)day < 0 || (int)day > 4)
                 throw new Exception("the day must be between sunday to thursday");
             hour -= 9;
-            if (hour < 0 && hour > 5)
+            if (hour < 0 || hour > 5)
                 throw new Exception("the hour must be between 9:00 to 14:00");
 
             //search the schedule to this week
@@ -209,12 +209,12 @@ namespace BE
 
             DayOfWeek day = d.DayOfWeek;
             int hour = d.Hour;
-            if ((int)day < 0 && (int)day > 4)
+            if ((int)day < 0 || (int)day > 4)
                 return false;
             hour -= 9;
-            if (hour < 0 && hour > 5)
+            if (hour < 0 || hour > 5)
                 return false;
-            if (schedule[(int)day][hour] == false )
+            if (schedule[(int)day][hour] == false)
                 return false;
             // search the schedule to this week
             week current = weeks.Find(w => week.first_day_of_week(d) == w.First_Day);
@@ -249,9 +249,11 @@ namespace BE
 
             return ret;
         }
-        public  int TestsInWeek(DateTime d)//return how many test he test in a specific week
+        public int TestsInWeek(DateTime d)//return how many test he test in a specific week
         {
             week current = weeks.Find(w => week.first_day_of_week(d) == w.First_Day);
+            if (current == null)
+                return 0;
             return current.TestsInWeek();
         }
     }
