@@ -104,6 +104,7 @@ namespace UIwpf
         {
             if (addTrainee == null)
                 addTrainee = new AddTrainee();
+            addTrainee.LogOutRequest += Logout_Request;
             Program.Children.Clear();
             Program.Children.Add(addTrainee);
         }
@@ -112,6 +113,7 @@ namespace UIwpf
         {
             if (addTester == null)
                 addTester = new AddTester();
+            addTester.LogOutRequest += Logout_Request;
             Program.Children.Clear();
             Program.Children.Add(addTester);
         }
@@ -133,6 +135,7 @@ namespace UIwpf
             Program.Children.Clear();
             Program.Children.Add(ent);
         }
+
         void StartProgram()
         {
             bool[][] work_time = new bool[5][];

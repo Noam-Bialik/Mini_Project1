@@ -44,6 +44,8 @@ namespace UIwpf
             TraineeUC.LessonsCounterInput.TextChanged += Done_IsEnabled;
         }
 
+        public event EventHandler LogOutRequest;
+
         private void DoneTrainee_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -101,6 +103,9 @@ namespace UIwpf
 
                 MessageBox.Show(exc.Message, "logic error", MessageBoxButton.OK);
             }
+            MessageBox.Show("Trainee successfully added", "Tracking message", MessageBoxButton.OK, MessageBoxImage.Information);
+
+            LogOutRequest(this, new EventArgs());
         }
 
         private void Done_IsEnabled(object sender, RoutedEventArgs e)
@@ -108,21 +113,19 @@ namespace UIwpf
 
             if (sender is TextBox)
             {
-                if (sender is TextBox)
-                {
+
                     if (((TextBox)sender).Text == "")
                     {
                         addChildren.Remove((Control)sender);
                         Done.IsEnabled = false;
                         return;
                     }
-                }
-                if (addChildren.Contains(sender))
-                    return;
-                addChildren.Add((Control)sender);
-                if (addChildren.Count == 14)
-                    Done.IsEnabled = true;
             }
+            if (!addChildren.Contains(sender))
+                addChildren.Add((Control)sender);
+
+            if (addChildren.Count == 14)
+                Done.IsEnabled = true;
         }
     }
 }

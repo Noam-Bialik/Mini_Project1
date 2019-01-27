@@ -94,6 +94,9 @@
     <Compile Include="TesterUserControl.xaml.cs">
       <DependentUpon>TesterUserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TestRequest.xaml.cs">
+      <DependentUpon>TestRequest.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TraineeHome.xaml.cs">
       <DependentUpon>TraineeHome.xaml</DependentUpon>
     </Compile>
@@ -187,6 +190,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TesterUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TestRequest.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

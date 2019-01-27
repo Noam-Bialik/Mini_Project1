@@ -43,6 +43,8 @@ namespace UIwpf
             data.SpecialityInput.SelectionChanged += Done_Click_IsEnabled;
         }
 
+        public event EventHandler LogOutRequest;
+
         private void Done_Click(object sender, RoutedEventArgs e)
         {
             string id = data.PersonAttribute.IdInput.Text;
@@ -154,6 +156,8 @@ namespace UIwpf
             {
                 MessageBox.Show(exc.Message, "logic error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+            MessageBox.Show("Tester successfully added", "Tracking message", MessageBoxButton.OK, MessageBoxImage.Information);
+            LogOutRequest(this, new EventArgs());
         }
         private void Done_Click_IsEnabled(object sender, RoutedEventArgs e)
         {
@@ -167,9 +171,8 @@ namespace UIwpf
                     return;
                 }
             }
-            if (addChildren.Contains(sender))
-                return;
-            addChildren.Add((Control)sender);
+            if (!addChildren.Contains(sender))
+                addChildren.Add((Control)sender);
             if (addChildren.Count == 13)
                 Done.IsEnabled = true;
         }

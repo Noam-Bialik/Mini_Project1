@@ -26,6 +26,7 @@ namespace UIwpf
         RemoveTrainee removeTrainee;
         AllTestersInRadius inRadius;
         AllTraineeTests traineeTests;
+        TestRequest TestRequest;
         public TraineeHome(Trainee t)
         {
             InitializeComponent();
@@ -70,7 +71,15 @@ namespace UIwpf
 
         private void AddTest_Click(object sender, RoutedEventArgs e)
         {
-
+            try
+            {
+                data.Children.Clear();
+            }
+            catch (Exception)
+            {
+            }
+            TestRequest = new TestRequest(trainee);
+            data.Children.Add(TestRequest);
         }
 
         private void AllTestersInRadius_Click(object sender, RoutedEventArgs e)
