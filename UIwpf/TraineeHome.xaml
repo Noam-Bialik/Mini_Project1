@@ -20,7 +20,7 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <Button Name="UpdateTrainee" Grid.Row="0" Content="update personal info" Click="UpdateTrainee_Click"  />
-            <Button Name="Remove" Grid.Row="1" Content="remove tester" Click="Remove_Click"  />
+            <Button Name="Remove" Grid.Row="1" Content="remove trainee" Click="Remove_Click"  />
             <Button Name="AddTest" Grid.Row="2" Content="add test" Click="AddTest_Click" />
             <Button Name="AllTests" Grid.Row="3" Content="all my tests" Click="AllTests_Click"  />
             <Button Name="AllTestersInRadius" Grid.Row="4" Content="Testers In Radius" Click="AllTestersInRadius_Click"  />
