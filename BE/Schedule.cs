@@ -64,8 +64,7 @@ namespace BE
 
             public override string ToString()
             {
-                string ret = "";
-                ret += first_Day.ToString() + ',';
+                string ret = first_Day.ToString() + ',';
                 for (int i = 0; i < 5; i++)
                 {
                     for (int j = 0; j < 6; j++)
