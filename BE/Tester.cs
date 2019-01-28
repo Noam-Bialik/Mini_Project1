@@ -40,6 +40,25 @@ namespace BE
         {
             copy(e);
         }
+
+        public Tester()
+        {
+        experience = 0;//how many years of experience the tester have 
+        max_tests_per_week =0;
+            speciality = 0; ;
+        max_range =0;
+            bool[][] arr = new bool[5][];
+            for (int i = 0; i < 5; i++)
+            {
+                arr[i] = new bool[6];
+                for (int j = 0; j < 6; j++)
+                {
+                    arr[i][j] =false;
+                }
+            }
+        schedule = new Schedule(arr);
+    }
+
         public void AddTest(DateTime d)
         {
             schedule.AddTest(d);

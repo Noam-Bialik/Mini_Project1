@@ -44,7 +44,7 @@
             </Grid.RowDefinitions>
             <TextBlock Text="maximum distance from the atart adress(km)"  HorizontalAlignment="Center" FontSize="18" Foreground="Indigo" FontWeight="Bold"/>
             <Slider Name="distance" Grid.Row="1" Minimum="1" Maximum="50" Value="15"/>
-            <TextBlock Grid.Row="2" Text="{Binding ElementName=distance, Path=Value}"  HorizontalAlignment="Center" FontSize="40" Foreground="DeepSkyBlue" FontWeight="Bold"/>
+            <TextBlock Grid.Row="2" Name="DistanceName" Text="{Binding ElementName=distance, Path=Value}"  HorizontalAlignment="Center" FontSize="40" Foreground="DeepSkyBlue" FontWeight="Bold"/>
         </Grid>
         <Grid Grid.Row="3">
             <Grid.ColumnDefinitions>

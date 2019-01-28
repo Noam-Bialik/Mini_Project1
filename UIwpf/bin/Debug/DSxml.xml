@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root>
+  <Tsters />
+  <Trainees>
+    <Trainee>
+      <Id>222222222</Id>
+      <FirstName>sgf</FirstName>
+      <LastName>dnf</LastName>
+      <PhoneNumber>0549875421</PhoneNumber>
+      <Birthdate>1989-10-11T00:00:00</Birthdate>
+      <Address>fgn!sfn!21!</Address>
+      <Gender>Female</Gender>
+      <LessonsCount>32</LessonsCount>
+      <TeacherName>nsfsmsfg</TeacherName>
+      <Specialty>Private</Specialty>
+      <Gearbox>Automaton</Gearbox>
+      <SchoolName>snfsn</SchoolName>
+    </Trainee>
+  </Trainees>
+  <Tests />
+</Root>

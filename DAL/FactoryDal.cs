@@ -9,6 +9,12 @@ namespace DAL
     public  class FactoryDal
     {
         static Idal instance = null;
+        /*public static Idal GetInstance()
+        {
+            if (instance == null)
+                instance = new Dal_imp();
+            return instance;
+        }*/
         public static Idal GetInstance()
         {
             if (instance == null)

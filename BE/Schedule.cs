@@ -256,5 +256,25 @@ namespace BE
                 return 0;
             return current.TestsInWeek();
         }
+
+        public override string ToString()
+        {
+            
+            string result = null;
+            for (int i = 0; i < 5; i++)
+            {
+                result += 'A' + i;
+                for (int j = 0; j < 6; j++)
+                {
+                    if (schedule[i][j])
+                    {
+
+                    }
+
+
+                }
+            }
+            return result;
+        }
     }
 }

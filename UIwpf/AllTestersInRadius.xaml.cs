@@ -29,6 +29,7 @@ namespace UIwpf
             CityInput.Text = address.City;
             StreetInput.Text = address.Street;
             HouseNumberInput.Text = address.Building_number.ToString();
+
         }
 
         private void Search_Click(object sender, RoutedEventArgs e)
@@ -47,6 +48,7 @@ namespace UIwpf
             }
             try
             {
+                TestersNumber.Text = "";
                 int help = (int)distance.Value;
                 TestersNumber.Text = FactoryBL.GetInstance().InRadius(address, help).Count.ToString();
             }

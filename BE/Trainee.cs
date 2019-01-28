@@ -44,6 +44,15 @@ namespace BE
             copy(source);
         }
 
+        public Trainee()
+        {
+           speciality = Vehicle.Private;
+            gearbox = Gearbox.Automaton;
+           school_name = null;
+           teacher_name =null;
+           lessons_count = -1;
+        }
+
         public void copy(Trainee c)//copy c to the object unless the id
         {
             //copy all the person's attributes

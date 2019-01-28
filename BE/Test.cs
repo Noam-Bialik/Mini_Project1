@@ -27,7 +27,7 @@ namespace BE
             Preferred_treinee_time = date;
         }
 
-        public Test(string trainee_id, DateTime preferred_treinee_time, Vehicle type, Address preferred_treinee_address, Address start_address = null, Address end_Address = null, string tester_id = null)
+        public Test(string trainee_id, DateTime preferred_treinee_time, Vehicle type, Address preferred_treinee_address, Address start_address = null, Address end_Address = null, string tester_id = null,int grade = -1,string note = null ,long test_id = -1)
         {
             try
             {
@@ -40,10 +40,26 @@ namespace BE
                 Start_address = start_address;
                 Preferred_treinee_address = preferred_treinee_address;
                 End_Address = end_Address;
-                grade = -1;
+                Grade = grade;
+                Note = note;
+                Test_id = test_id;
             }
             catch(Exception)
             { throw; }
+        }
+
+        public Test()
+        {
+            test_id =-1;
+            tester_id = null;
+            trainee_id = null;
+            preferred_treinee_time = new DateTime(0);
+            type = Vehicle.Private;
+            preferred_treinee_address =new Address(null,0,null);
+            start_address = new Address(null, 0, null);
+            end_Address = new Address(null, 0, null);
+            grade = -1;
+            note = null;
         }
 
         public long Test_id { get => test_id; set => test_id = value; }

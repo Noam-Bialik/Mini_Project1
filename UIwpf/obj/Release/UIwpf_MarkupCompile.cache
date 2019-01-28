@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\obj\Release\
+C:\Users\Noam Bialik\Source\Repos\Noam-Bialik\Mini_Project1\UIwpf\obj\Release\
 UIwpf
 none
 false
 TRACE
-C:\Users\אביעד\Desktop\Mini_Project1\UIwpf\App.xaml
-21-145029048
+C:\Users\Noam Bialik\Source\Repos\Noam-Bialik\Mini_Project1\UIwpf\App.xaml
+22-2072256263
 
-2541547031
-123-384794737
-AddTester.xaml;AddTrainee.xaml;AllTesters.xaml;AllTestersInRadius.xaml;AllTesterTests.xaml;AllTests.xaml;AllTrainees.xaml;AllTraineeTests.xaml;DirectorHome.xaml;entrance.xaml;MainWindow.xaml;PersonUserControl.xaml;RemoveTester.xaml;RemoveTrainee.xaml;TesterHome.xaml;TesterUserControl.xaml;TraineeHome.xaml;TraineeUserControl.xaml;UpdateTestByTester.xaml;UpdateTester.xaml;UpdateTrainee.xaml;
+26-268550039
+123-1247976251
+AddTester.xaml;AddTrainee.xaml;AllTesters.xaml;AllTestersInRadius.xaml;AllTesterTests.xaml;AllTests.xaml;AllTrainees.xaml;AllTraineeTests.xaml;DirectorHome.xaml;entrance.xaml;MainWindow.xaml;PersonUserControl.xaml;RemoveTester.xaml;RemoveTrainee.xaml;TesterHome.xaml;TesterUserControl.xaml;TestRequest.xaml;TraineeHome.xaml;TraineeUserControl.xaml;UpdateTestByTester.xaml;UpdateTester.xaml;UpdateTrainee.xaml;
 
 True
 

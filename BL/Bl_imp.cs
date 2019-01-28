@@ -132,9 +132,9 @@ namespace BL
             {
                 dal.AddTester(tester);
             }
-            catch
+            catch(Exception e)
             {
-                throw;
+                throw e;
             }
 
 

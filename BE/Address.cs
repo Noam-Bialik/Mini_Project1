@@ -18,6 +18,11 @@ namespace BE
             building_number = _building_number;
 
         }
+        public override string ToString()
+        {
+            return city + "!" + street + "!" + building_number.ToString() + "!";
+        }
+
         string city;
         string street;
         int building_number;

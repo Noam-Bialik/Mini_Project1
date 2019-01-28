@@ -138,7 +138,7 @@ namespace UIwpf
 
         void StartProgram()
         {
-            bool[][] work_time = new bool[5][];
+            /*bool[][] work_time = new bool[5][];
             for (int i = 0; i < 5; i++)
             {
                 Console.WriteLine("at" + (DayOfWeek)i);
@@ -159,7 +159,7 @@ namespace UIwpf
             address = new Address("grizim", 17, "kedumim");
             date_of_birth = new DateTime(200, 9, 2);
             Trainee trainee = new Trainee("111111111", "aviad", "davidi", date_of_birth, Gender.Female, "0525067871", address, Vehicle.Private, Gearbox.Automaton, "yyyy", "harv batat", 100);
-            help.AddTrainee(trainee);
+            help.AddTrainee(trainee);*/
         }
     }
 }

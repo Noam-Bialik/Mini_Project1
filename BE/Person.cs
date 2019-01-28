@@ -59,21 +59,33 @@ namespace BE
         public Address _Address { get => address; set => address = value; }
 
 
-        public Person(string id, string first_name, string last_name, DateTime birthdate, Gender Gender, string phone_number, Address address)
+        public Person()
         {
-            Id = id;
-            First_name = first_name;
-            Last_name = last_name;
-            Birthdate = birthdate;
-            _Gender = Gender;
-            Phone_number = phone_number;
-            _Address = address;
+            Id = "0";
+            First_name = null;
+            Last_name = null;
+            Birthdate = new DateTime(0);
+            _Gender = Gender.Male;
+            Phone_number ="0";
+            _Address = new Address(null,0,null);
         }
         public Person(Person e)
         {
             Id = e.Id;
             copy(e);
         }
+
+        public Person(string id , string first_name, string last_name, DateTime birthdate, Gender gender, string phone_number, Address address)
+        {
+            this.id = id;
+            this.first_name = first_name;
+            this.last_name = last_name;
+            this.birthdate = birthdate;
+            Gender = gender;
+            this.phone_number = phone_number;
+            this.address = address;
+        }
+
         public void copy(Person c)//copy c to the object unless the id
         {
             First_name = c.First_name;
