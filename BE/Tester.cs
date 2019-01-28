@@ -36,6 +36,26 @@ namespace BE
                 throw;
             }
         }
+
+        public Tester(string id, string first_name, string last_name, DateTime birthdate, Gender Gender, string phone_number, Address address, int experience, int max_tests_per_week, double max_range, Vehicle speciality, Schedule schedule) : base(id, first_name, last_name, birthdate, Gender, phone_number, address)
+        {
+
+            //try to initialize the variables
+            try
+            {
+                this.schedule = new Schedule(schedule);
+                Experience = experience;
+                Max_tests_per_week = max_tests_per_week;
+                Max_range = max_range;
+                Speciality = speciality;
+                Phone_number = phone_number;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
         public Tester(Tester e):base(e)
         {
             copy(e);

@@ -24,6 +24,7 @@ namespace BE
                         schedule[i][j] = c.schedule[i][j];
                 }
             }
+
             public week(bool[][] schedule, DateTime first_Day)
             {
                 First_Day = first_Day;
@@ -35,6 +36,44 @@ namespace BE
                         this.schedule[i][j] = false;
                 }
             }
+
+            public week(string weekstring)
+            {
+                try
+                {
+
+                string[] arr = weekstring.Split(',');
+                int counter = 0;
+                First_Day = new DateTime();
+                First_Day = DateTime.Parse(arr[counter]);
+                for (int i = 0; i < 5; i++)
+                {
+                    for (int j = 0; j < 6; j++)
+                    {
+                        counter++;
+                        schedule[i][j] = bool.Parse(arr[counter]);
+                    }
+                }
+                }
+                catch (Exception)
+                {
+
+                    throw new Exception("the string not valid");
+                }
+            }
+
+            public override string ToString()
+            {
+                string ret = "";
+                ret += first_Day.ToString() + ',';
+                for (int i = 0; i < 5; i++)
+                {
+                    for (int j = 0; j < 6; j++)
+                        ret += schedule[i][j].ToString() + ',';
+                }
+                return ret;
+            }
+
             public void AddTest(int day, int hour)
             {
                 if (day < 0 || day > 4)
@@ -47,6 +86,7 @@ namespace BE
                 schedule[day][hour] = true;
 
             }
+
             public void RemoveTest(int day, int hour)
             {
                 if (day < 0 || day > 4)
@@ -58,6 +98,7 @@ namespace BE
                     throw new Exception("this test dont exist");
                 schedule[day][hour] = false;
             }
+
             public static DateTime first_day_of_week(DateTime value)
             {
                 int day = value.Day;
@@ -82,6 +123,7 @@ namespace BE
                 }
                 return new DateTime(year, month, day);
             }
+
             public int TestsInWeek()
             {
                 int counter = 0;
@@ -95,6 +137,7 @@ namespace BE
                 }
                 return counter;
             }
+
         }
 
 
@@ -126,7 +169,54 @@ namespace BE
                     schedule[i][j] = c.schedule[i][j];
             }
         }
+        public Schedule(string schedulestring )
+        {
+            try
+            {
+                weeks = new List<week>();
+                string[] arr = schedulestring.Split('+');
+                string[] innerarr = arr[0].Split(',');
+                int counter = 0;
+                for (int i = 0; i < 5; i++)
+                {
+                    for (int j = 0; j < 6; j++)
+                    {
+                        schedule[i][j] = bool.Parse(innerarr[counter]);
+                        counter++;
+                    }
+                }
+                counter = 0;
+                foreach (var item in arr)
+                {
+                    if (counter == 0)
+                        continue;
+                    counter++;
+                    weeks.Add(new week(item));
+                }
+            }
+            catch (Exception)
+            {
+
+                throw new Exception("the string not valid");
+            }
+        }
         //funcs
+        public override string ToString()
+        {
+            
+            string result = "";
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 6; j++)
+                    result += schedule[i][j].ToString()+',';
+            }
+
+            foreach (var item in weeks)
+            {
+                result += '+' + item.ToString();
+            }
+            return result;
+        }
         public void AddHourToSchedule(DayOfWeek day, int hour)
         {
             if ((int)day < 0 || (int)day > 4)
@@ -257,24 +347,5 @@ namespace BE
             return current.TestsInWeek();
         }
 
-        public override string ToString()
-        {
-            
-            string result = null;
-            for (int i = 0; i < 5; i++)
-            {
-                result += 'A' + i;
-                for (int j = 0; j < 6; j++)
-                {
-                    if (schedule[i][j])
-                    {
-
-                    }
-
-
-                }
-            }
-            return result;
-        }
     }
 }
